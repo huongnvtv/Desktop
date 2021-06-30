@@ -1,0 +1,19 @@
+.container {
+	height: 300px;
+	width: 300px;
+	background-color: #AAA;
+	position: relative;
+}
+.box-1 {
+	height: 200px;
+	width: 200px;
+	background-color: rgba(0, 255, 100, 0.6);
+	position: relative;
+}
+.box-2 {
+	height: 100px;
+	width: 100px;
+	background-color: rgb(0, 50, 255);
+	position: absolute; /* di chuyển vị trí tương đối so với thằng cha (không có cha thì có ông ,cụ,...) có position là relative */
+	bottom: 0;
+}

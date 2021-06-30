@@ -1,0 +1,7 @@
+a[target] {
+	color: red; /* những thẻ a nào mà có atribute là target mới được css */
+}
+
+input[type = 'text']{
+	border: 1px solid red; /* Chỉ những thằng nào có type ='text' được css */
+}

@@ -1,0 +1,41 @@
+/*
+a:link { /* trạng thái mặc địch */
+	color: #496cca;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+a:visited { /* trạng thái khi người dùng đã truy cập */
+    color: orange;
+}
+a:hover { /* trạng thái khi người dùng di chuột qua nó */
+   text-decoration: underline;
+}
+a:active { /* trạng thái khi người dùng click vào nhưng chưa thả tay ra */
+   color: red;
+}
+*/
+.demo-link:link { /* trạng thái mặc địch */
+	color: #496cca;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+.demo-link:visited { /* trạng thái khi người dùng đã truy cập */
+    color: orange;
+}
+.demo-link:hover { /* trạng thái khi người dùng di chuột qua nó */
+   text-decoration: underline;
+}
+.demo-link:active { /* trạng thái khi người dùng click vào nhưng chưa thả tay ra */
+   color: red;
+}
+.button-link {
+	text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 25px;
+    font-family: sans-serif;
+}
+.button-link:hover {
+	background-color: #11118c;
+	text-decoration: none;
+}

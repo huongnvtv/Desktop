@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Todo-List</title>
+</head>
+<body>
+	<input id="item" type="text" name="" placeholder="Nhập vào hành động" />
+    <ul id="todo-list">
+      
+    </ul>
+    <button onclick="addItem()">thêm</button>
+    <script type="text/javascript">
+    	var todoList =[
+           'Take a shower',
+           'Go to school',
+           'Go to work'
+    	]
+    	function showTodoList(){
+    		var htmlList=document.getElementById('todo-list');
+	    	var content=todoList.map(function(item){
+	    		return "<li>"+item +"</li>";
+	    	})
+	    	htmlList.innerHTML=content.join("");
+	}
+	function addItem(){
+            var item=document.getElementById('item');
+            var newItem=item.value;
+            todoList.push(newItem);
+            showTodoList();
+            item.value= "";
+	}
+	showTodoList();    
+    </script>
+</body>
+</html>

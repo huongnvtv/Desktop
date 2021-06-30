@@ -1,0 +1,28 @@
+body {
+	font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+
+}
+.weekly-item {
+	display: flex;
+	align-content: center; /* căn giữa các component */
+	padding: 12px 0;
+	border-bottom: 1px solid #EEE;
+}
+.weekly-item .number {
+	font-size: 28px;
+	padding: 0 10px;
+}
+.singer {
+	font-size: 14px;
+	color: #999;
+}
+.song-title {
+	margin-bottom: 3px;
+}
+.weekly-item .view-count {
+	font-size: 15px;
+	color: #999;
+}
+.weekly-item .info {
+	flex-grow: 1;
+}

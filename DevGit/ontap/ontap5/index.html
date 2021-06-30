@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ontap</title>
+</head>
+<body>
+   <script type="text/javascript">
+       var courses =[
+          {id :1,name :'PHP' ,coin :100},
+          {id :2,name :'ReactJs',coin :20}
+       ]
+       // var isFree = courses.every(function(item){
+       //  return item.coin == 0;
+       // })
+       // var isFreeSome = courses.some(function(item){
+       //  return item.coin == 20;
+       // })
+       // console.log(isFreeSome);
+      var change = courses.map(function(item){
+         return {
+            id : item.id,
+            khoa_hoc :`Khoa ${item.name}`,
+            coin :item.coin
+         }
+      })
+       console.log(change);
+       console.log(Boolean(2));
+   </script>
+</body>
+</html>

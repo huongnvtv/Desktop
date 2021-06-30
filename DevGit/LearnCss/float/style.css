@@ -1,0 +1,8 @@
+.image-style {
+	float: left;
+}
+p{
+	clear: left; /* không muốn thằng nào ở bên trái */
+	/* clear :right ; không muốn thằng nào ở bên phải 
+	clean :both ; không muốn thằng nào ở cả hai bên */
+}

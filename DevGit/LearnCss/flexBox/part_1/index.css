@@ -1,0 +1,30 @@
+/* 
+justify-content :flex-start,flex-end,..
+
+*/
+.container {
+	display: flex;  /* chuyển về chế độ flex */
+	flex-direction: row; /* hướng flex */
+	background-color: #AAA;
+}
+.child-1 {
+	background-color: red;
+	flex-basis: 200px;
+	flex-grow: 1;
+}
+.child-2 {
+	background-color: skyblue;
+	flex-basis: 300px;
+	flex-grow: 1;
+}
+.child-3 {
+	background-color: orange;
+	flex-basis: 300px;
+	flex-grow: 1;
+}
+.container-swap .child-1 {
+	order: 1;
+}
+.container-swap .child-2 {
+	order: 2;
+}

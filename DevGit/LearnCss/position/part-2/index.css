@@ -1,0 +1,17 @@
+.box {
+	height: 100px;
+	width: 100px;
+}
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+	/*position: relative; /* phần tử được định vị so với vị trí bình thường của nó và giữ khoảng trống ban đầu của nó*/
+	position: fixed; /* di chuyển được định vị so với cửa sổ trình duyệt của nó */
+	right: 20px; /* cách bên phải 20px */
+	top: 10px; /* cách top 10 px*/
+}
+.blue {
+	background-color: blue;
+}

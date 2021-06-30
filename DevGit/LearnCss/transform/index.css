@@ -1,0 +1,6 @@
+.demo {
+	height: 200px;
+	width: 200px;
+	background-color: #DDD;
+	transform: scale(0.5);
+}

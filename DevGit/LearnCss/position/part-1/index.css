@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+}
+.box {
+	height: 100px;
+	width: 100px;
+}
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+	/*position: relative; /* phần tử được định vị so với vị trí bình thường của nó */
+	position: fixed; /* di chuyển được định vị so với cửa sổ trình duyệt của nó */
+	left: 20px;
+}
+.blue {
+	background-color: blue;
+}

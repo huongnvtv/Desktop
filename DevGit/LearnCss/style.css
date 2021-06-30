@@ -1,0 +1,41 @@
+#id1 {
+	color: rgb(100,100, 100);
+	font-family: sans-serif;
+}
+#demo1 {
+	margin-top: 10px;
+}
+.list-item-pattern {
+	background-image: url("https://cdn5.vectorstock.com/i/1000x1000/57/44/abstract-pattern-vector-26345744.jpg");
+	/* background-size: 80%; 
+	background-repeat: no-repeat; */
+	background-repeat: repeat-x;
+	height: 100px;
+}
+.list-item {
+	border-radius: 5px;
+}
+.style-font {
+	color: white;
+	font-size: 28px;
+	margin-left: 10px;
+}
+.list-item-360 {
+	background-image: url(./bg-360.jpg);
+	color: white;
+	font-size: 28px;
+	font-style:sans-serif;
+	height: 200px;
+	background-size: cover;
+	background-position: 0 -400px;
+}
+.list-item-parallax {
+	background-image: url(./bg-360.jpg);
+	color: white;
+	font-size: 28px;
+	font-style:sans-serif;
+	height: 300px;
+	background-size: cover;
+	background-position: -200px 0;
+	background-attachment: fixed;
+}

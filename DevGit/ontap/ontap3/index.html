@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trang chủ</title>
+</head>
+<body>
+	<input id="item" type="text" name="" placeholder="Nhập vào hành động" />
+    <ul id="todo-list">
+      
+    </ul>
+    <button id="button-id" >thêm</button>
+    <script type="text/javascript">
+    	var storageKey ="listTodo";
+    	var dataString =localStorage.getItem(storageKey);
+    	var todoList;
+    	if(dataString){
+    		todoList = dataString.split(",");
+    	}else{
+    		todoList =[];
+    	}
+    	var addbutton=document.getElementById('button-id');
+	addbutton.addEventListener('click',addItem);
+    	function showTodoList(){
+    		var htmlList=document.getElementById('todo-list');
+	    	var content=todoList.map(function(item){
+	    		return "<li>"+item +"</li>";
+	    	})
+	    	htmlList.innerHTML=content.join("");
+	}
+	function addItem(){
+            var item=document.getElementById('item');
+            var newItem=item.value;
+            todoList.push(newItem);
+            showTodoList();
+            item.value= "";
+            localStorage.setItem(storageKey,todoList);
+	}
+	showTodoList();    
+    </script>
+</body>
+</html>

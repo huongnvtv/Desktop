@@ -1,0 +1,32 @@
+body {
+	font-family: Arial,sans-serif;
+}
+.menu {
+	display: flex; /* chuyển từ inline thành block */
+	padding: 0; /* bỏ lề của thẻ */
+    list-style: none;
+}
+.menu li {
+	padding: 8px 16px; /* trên dưới và trái phải */
+}
+.menu li:hover {
+	background-color: #DDD;
+}
+.subMenu {
+	list-style: none;
+	padding: 0;
+	position: absolute; /* dùng để tách ra khỏi thằng cha */
+	display: none;
+	left: 0; /* căn bên trái trùng với thằng cha */
+	top: 100%; /* đầu thằng subMenu sẽ nằm dưới đít thằng has-subMenu */
+	background-color: rgba(0, 255, 50, 0.2);
+}
+.has-subMenu {
+	position: relative;
+}
+.has-subMenu:hover .subMenu {
+	display: block;
+}
+a {
+	text-decoration: none;
+}

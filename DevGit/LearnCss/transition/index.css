@@ -1,0 +1,28 @@
+.album-item {
+	width: 200px;
+	height: 200px;
+	background: url(https://media-cdn.laodong.vn/storage/newsportal/2019/7/1/741910/Stg02291-15619849253.jpg);
+	background-size: cover;
+	background-position: center;
+	font-size: 60px;
+	color: white;
+}
+.overlay {
+	height: 100%;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center; /* cho vào giữa theo trục định nghĩa ,mặc định là trục ngang nên cho vào giữa theo trục ngang */
+	align-items: center; /* cho vào giữa theo trục vuông góc với trục mặc định */
+	opacity: 0;
+	transition: all 0.3s;
+}
+.album-item:hover .overlay {
+	opacity: 1;
+}
+.album-item .overlay i {
+	transform: scale(0);
+	transition: all 0.3s;
+}
+.album-item:hover .overlay i{
+	transform: scale(1);
+}

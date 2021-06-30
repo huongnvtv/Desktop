@@ -1,0 +1,16 @@
+/* tất cả thẻ nào là item-2 của cha list-2 thì sẽ có màu đỏ */
+/*.list-2 .item-2 {
+	color: red;
+}*/
+/* chỉ có thằng con có border thôi */
+/*.list-1 >.item {
+	border: 1px solid orange;
+}*/
+/*tìm trong list-1 thằng có item-2 và select thằng anh em tiếp theo của nó */
+/*.list-1 .item-2 + .item{
+	border: 1px solid orange;
+}*/
+/*tìm trong list-1 thằng có item-2 và select tất cả thằng anh em tiếp theo của nó */
+.list-1 .item-1 ~ .item{
+	border: 1px solid orange;
+}

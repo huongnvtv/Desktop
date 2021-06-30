@@ -1,0 +1,21 @@
+.album-square {
+	height: 128px;
+	width: 128px;
+	color: #FFF;
+	background-image: url("https://dep.com.vn/wp-content/uploads/2019/07/deponline-sontung.jpg"); 
+	background-position: center;
+	background-size: cover;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+.album-square .overlay {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center; /* cho vào giữa theo trục định nghĩa ,mặc định là trục ngang nên cho vào giữa theo trục ngang */
+	align-items: center; /* cho vào giữa theo trục vuông góc với trục mặc định */
+	opacity: 0;
+}
+.album-square:hover .overlay {
+	opacity: 1;
+}

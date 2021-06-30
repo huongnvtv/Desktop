@@ -1,0 +1,9 @@
+.wrapper {
+	display: grid;
+	/*grid-template-columns: 70% 30%;  chia làm 2 cột một cột chiếm 70% và một cột chiếm 30% */
+	grid-template-columns: 2fr 1fr; /* chia làm 3 cột cột 1 chiếm 2 phần cột 2 chiếm 1 phần */
+}
+.footer,.header {
+	grid-column-start: 1; /* bắt đầu ở cột 1 và kết thúc ở cột 3 */
+	grid-column-end: 3;
+}
