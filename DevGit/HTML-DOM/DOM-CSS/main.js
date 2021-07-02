@@ -11,3 +11,4 @@ Object.assign(divElement.style,{
 })
 // get ra giá trị thuộc tính css
 console.log(divElement.style.backgroundColor)
+// lưu ý DOM-CSS là thuộc tính của ElementNode
