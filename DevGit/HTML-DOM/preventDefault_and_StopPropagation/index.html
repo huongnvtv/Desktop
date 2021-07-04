@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreventDefault</title>
+    <style>
+        ul {
+            display: none;
+        }
+        input:focus ~ ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://fullstack.edu.vn">Học lập trình fullstack</a>
+    <br/>
+    <a href="https://google.com.vn">Tìm kiếm google</a>
+    <h4>Ví dụ thứ 2 khi focus vào thẻ input nhấc ra không bị mất</h4>
+    <input placeholder="Tìm kiếm " />
+    <ul>
+      <li>JavaScripts</li>
+      <li>Java</li>
+      <li>Python</li>
+      <li>PHP</li>
+    </ul>
+    <script src="./main.js" />
+</body>
+</html>
