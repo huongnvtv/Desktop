@@ -7,10 +7,6 @@ for(var i = 0; i < inputElements.length; i++){
        var grandParentElement = this.parentElement.parentElement;
        grandParentElement.remove();// dùng để xóa 1 element
        // this trỏ đến đối tượng đang xét == e.target
-       n--;
-       if(n == 0){
-           
-       }
    })
 }
 
