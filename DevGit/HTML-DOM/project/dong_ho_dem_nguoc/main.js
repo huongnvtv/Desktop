@@ -40,4 +40,5 @@ function start(){
 }
 function stop(){
     clearTimeout(timeout);
+    // dừng quá trình đợi 
 }
