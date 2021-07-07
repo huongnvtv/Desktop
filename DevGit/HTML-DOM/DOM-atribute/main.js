@@ -18,3 +18,5 @@ pElement.setAttribute('class','demo')
 // thuộc tính hợp lệ là thuộc tính mà trong thẻ đấy có thể có thuộc tính 
 // đấy vd :thẻ h1 thì không thể có href nhưng có id ,class,style
 console.log(pElement.getAttribute('class'))
+
+var pElement = document.querySelector('p');
