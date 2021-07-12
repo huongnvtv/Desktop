@@ -50,6 +50,24 @@ getComments()
        var user_ids = comments.map(function(item){
            return item.user_id
        })
+       return getUsersById(user_ids)
+              .then(function(users){
+                  return {
+                      user : users,
+                      comment : comments
+                  }
+              })
+   })
+   .then(function(data){
+       var commentBlock = document.getElementById('comment-block');
+       var html = '';
+       data.comment.forEach(function(comment){
+            var user = data.user.find(function(item){
+                return item.id == comment.user_id;
+            })
+            html += `<li>${user.name} : ${comment.content}</li>` 
+       })
+       commentBlock.innerHTML = html;
    })
 getUsersById([1,2])
    .then(function(data){
