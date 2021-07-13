@@ -1,24 +1,29 @@
 {
-    "course" :[
-        {
-            "id" : 1,
-            "name" : "Javascript cơ bản",
-            "description" :"Khóa học JavaScript"
-        },
-        {
-            "id" : 2,
-            "name" : "Python cơ bản",
-            "description" :"Khóa học Python"
-        },
-        {
-            "id" : 3,
-            "name" : "Java cơ bản",
-            "description" :"Khóa học Java"
-        },
-        {
-            "id" : 4,
-            "name" : "PHP cơ bản",
-            "description" :"Khóa học PHP"
-        }
-    ]
+  "course": [
+    {
+      "id": 1,
+      "name": "Javascript cơ bản",
+      "description": "Khóa học JavaScript"
+    },
+    {
+      "id": 2,
+      "name": "Python cơ bản",
+      "description": "Khóa học Python"
+    },
+    {
+      "id": 3,
+      "name": "Java cơ bản",
+      "description": "Khóa học Java"
+    },
+    {
+      "id": 4,
+      "name": "PHP cơ bản",
+      "description": "Khóa học PHP"
+    },
+    {
+      "name": "Xây dựng web với NodeJS & ExpressJS",
+      "description": "Xây dựng web trong thực tế với NodeJS & ExpressJS với cách chia sẻ chi tiết, tận tâm, dễ hiểu và chất giọng giàu sức sống của người chia sẻ",
+      "id": 5
+    }
+  ]
 }
