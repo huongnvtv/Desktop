@@ -11,13 +11,13 @@
       "description": "Khóa học Python"
     },
     {
-      "id": 3,
       "name": "Java cơ bản",
-      "description": "Khóa học Java"
+      "description": "Khóa học Java",
+      "id": 3
     },
     {
       "name": "Xây dựng web với NodeJS & ExpressJS",
-      "description": "Xây dựng web trong thực tế với NodeJS & ExpressJS với cách chia sẻ chi tiết, tận tâm, dễ hiểu và chất giọng giàu sức sống của người chia sẻ",
+      "description": "Khóa học Nodejs",
       "id": 4
     }
   ]

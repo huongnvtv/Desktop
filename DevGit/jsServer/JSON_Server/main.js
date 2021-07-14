@@ -47,19 +47,7 @@ function createCoures(data, callback){
     })
     .then(callback)
 }
-function courseEdit(data, id, callback){
-    fetch(courseAPI +"/" +id, {
-        method : 'put',
-        body : JSON.stringify(data),
-        headers: {
-         'Content-Type': 'application/json'
-       }
-    })
-     .then(function(respone){
-         return respone.json();
-     })
-     .then(callback)
-}
+
 function handleDeleteCourse(id) {
     fetch(courseAPI + "/" +id, {
         method : 'delete',
@@ -90,13 +78,25 @@ function editCourse(id){
         inputName.value = datavalue.name;
         inputds.value = datavalue.description;
         createButton.innerText = "Lưu"
-        data1.name = datavalue.name;
-        data1.description = datavalue.description;
     })
     createButton.onclick = function(){
-        courseEdit(data1, id, function(){
-            getCourses(renderCourse)
+        data1.name = inputName.value;
+        data1.description = inputds.value;
+        fetch(courseAPI +"/" +id, {
+            method : 'put',
+            body : JSON.stringify(data1),
+            headers: {
+             'Content-Type': 'application/json'
+           }
         })
+         .then(function(respone){
+             return respone.json();
+         })
+         .then(function(){
+            getCourses(renderCourse)
+            inputName.value = "";
+            inputds.value = "";
+         })
     }
 }
 function renderCourse(courses){
