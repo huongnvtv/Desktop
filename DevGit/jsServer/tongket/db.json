@@ -1,0 +1,34 @@
+{
+  "class": [
+    {
+      "id": 1,
+      "className": "Lớp 1",
+      "siSo": 0
+    },
+    {
+      "id": 2,
+      "className": "Lớp 2",
+      "siSo": 0
+    }
+  ],
+  "student": [
+    {
+      "id": 1,
+      "id_lop": 1,
+      "name": "Sơn Đặng",
+      "date": "10/2/1995"
+    },
+    {
+      "id": 2,
+      "id_lop": 1,
+      "name": "Xuân Phúc",
+      "date": "15/5/1996"
+    },
+    {
+      "id": 3,
+      "id_lop": 2,
+      "name": "Văn Hướng",
+      "date": "10/1/2000"
+    }
+  ]
+}
