@@ -44,7 +44,7 @@ function renderStudentWithId(id,listStudent){
                 <h4>${student.name}</h4>
                 <p>${student.date}</p>
                 <button>Sửa</button>
-                <button>xóa</button>
+                <button onclick = "handDeleteStudent(${student.id})">xóa</button>
                 </li>`
     })
     var divHTML = "<div class = 'class-sub-"+id +"'></div>";
@@ -110,7 +110,9 @@ function handCreateForm(){
                 showStudent(result.id);
             })
         })
-        
-        
+    
     }
+}
+function handDeleteStudent(id){
+    
 }
