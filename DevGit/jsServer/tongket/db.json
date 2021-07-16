@@ -29,6 +29,12 @@
       "idLop": 2,
       "name": "Văn Hướng",
       "date": "10/1/2000"
+    },
+    {
+      "name": "Văn Nam",
+      "date": "12/02/2002",
+      "idLop": 2,
+      "id": 4
     }
   ]
 }

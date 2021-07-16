@@ -1,8 +1,13 @@
 // xây dựng một ứng dụng quản lí sinh viên qua từng lớp
 var classAPI = "http://localhost:3000/class";
 var studentAPI = "http://localhost:3000/student";
+var inputNameElement = document.querySelector('input[name= "name"]');
+var inputDateElement = document.querySelector('input[name= "date"]');
+var btnCreate = document.querySelector('#btn-add');
 function start(){
     getListClass(renderClass);
+    getListClass(renderShowInputClass);
+    handCreateForm();
 }
 function getListClass(callback){
     fetch(classAPI)
@@ -63,14 +68,49 @@ function showStudent(id){
     })
 }
 start();
-var btnCreate = document.querySelector('#btn-add');
-console.log(btnCreate)
-btnCreate.addEventListener('click',function(){
-    var btnString1 = '<br><button id = "add-class">Thêm lớp</button>'
-    var btnString2 = '<button id= "add-student">Thêm sinh viên</button>'
-    btnCreate.insertAdjacentHTML('afterend',btnString1+btnString2)
-    btnCreate.removeAttribute('onclick')
-})
-function addClass(){
 
+function renderShowInputClass(classes){
+    var showClassElement = document.getElementById('list-class');
+    var htmls = classes.map(function(itemClass){
+         return `<option >${itemClass.className}</option>`
+    })
+    showClassElement.innerHTML = htmls.join('')
+}
+function createStudent(data,callback){
+    fetch(studentAPI, {
+        method : 'post',
+        body : JSON.stringify(data),
+        headers: {
+         'Content-Type': 'application/json'
+       }
+    })
+     .then(function(respone){
+          return respone.json();
+     })
+     .then(callback);
+}
+function handCreateForm(){
+    btnCreate.onclick = function(){
+        var nameitem = inputNameElement.value;
+        var dateitem = inputDateElement.value;
+        var showClassElement = document.getElementById('list-class');
+        var optionList =showClassElement.options;
+        var index = showClassElement.selectedIndex;
+        var className = optionList[index].text;
+        getListClass(function(data){
+            var result = data.find(function(item){
+                return item.className == className;
+            })
+            var formData = {
+                name : nameitem,
+                date : dateitem,
+                idLop : result.id
+            }
+            createStudent(formData,function(){
+                showStudent(result.id);
+            })
+        })
+        
+        
+    }
 }
