@@ -132,9 +132,35 @@ function handEditStudent(id){
     var nameStudent = getLiStudent.querySelector('h4').innerText;
     var dateStudent = getLiStudent.querySelector('p').innerText;
     var showClassElement = document.getElementById('list-class');
-    var optionList =showClassElement.options;
-    var index = showClassElement.selectedIndex;
-    var className = optionList[index].text;
     inputNameElement.value = nameStudent;
     inputDateElement.value = dateStudent;
+    btnCreate.textContent = "Lưu";
+    btnCreate.onclick = function(){
+        var optionList =showClassElement.options;
+        var index = showClassElement.selectedIndex;
+        var classNameInput = optionList[index].text;
+        getListClass(function(data){
+            var resultClass = data.find(function(itemClass){
+                return itemClass.className == classNameInput;
+            })
+            var formData = {
+                idLop : resultClass.id,
+                name : inputNameElement.value,
+                date : inputDateElement.value
+            }
+            fetch(studentAPI + "/" + id, {
+                method : 'put',
+                body : JSON.stringify(formData),
+                headers: {
+                 'Content-Type': 'application/json'
+               }
+            })
+             .then(function(respone){
+                  return respone.json();
+             })
+             .then(function(data){
+                console.log(data);
+             });
+        })
+    }
 }
