@@ -43,7 +43,7 @@ function renderStudentWithId(id,listStudent){
         return  `<li class ="student-${student.id}">
                 <h4>${student.name}</h4>
                 <p>${student.date}</p>
-                <button>Sửa</button>
+                <button onclick = "handEditStudent(${student.id})">Sửa</button>
                 <button onclick = "handDeleteStudent(${student.id})">xóa</button>
                 </li>`
     })
@@ -114,5 +114,27 @@ function handCreateForm(){
     }
 }
 function handDeleteStudent(id){
-    
+    fetch(studentAPI + "/" +id, {
+        method : 'delete',
+        headers: {
+         'Content-Type': 'application/json'
+       }
+    })
+     .then(function(respone){
+          return respone.json();
+     })
+     .then(function(data){
+         console.log(data) 
+     });
+}
+function handEditStudent(id){
+    var getLiStudent = document.querySelector('.student-' +id);
+    var nameStudent = getLiStudent.querySelector('h4').innerText;
+    var dateStudent = getLiStudent.querySelector('p').innerText;
+    var showClassElement = document.getElementById('list-class');
+    var optionList =showClassElement.options;
+    var index = showClassElement.selectedIndex;
+    var className = optionList[index].text;
+    inputNameElement.value = nameStudent;
+    inputDateElement.value = dateStudent;
 }
