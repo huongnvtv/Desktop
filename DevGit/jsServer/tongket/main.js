@@ -21,7 +21,7 @@ function renderClass(classes){
     var mappingClasses =  classes.map(function(itemClass){
         return `
            <div style ="margin-bottom :20px" class = "classes-${itemClass.id}">
-            <ul style ="display : inline" >${itemClass.className} sỉ số lớp :${itemClass.siSo}</ul>
+            <ul style ="display : inline" >${itemClass.className} - sỉ số lớp :${itemClass.siSo}</ul>
             <button id="btn-${itemClass.id}" onclick = "showStudent(${itemClass.id})" >Hiển thị danh sách sinh viên</button>
             <br>
            </div>
@@ -163,4 +163,16 @@ function handEditStudent(id){
              });
         })
     }
+}
+function updateStudentInclass(idClass){
+    var siSo = 0;
+    getListStudent(function(data){
+        for(var student = 0; student < data.length; student++){
+            if(student.idLop == idClass){
+                console.log(student)
+                siSo++;
+            }
+        }
+    })
+    return siSo;
 }

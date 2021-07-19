@@ -3,12 +3,12 @@
     {
       "id": 1,
       "className": "Lớp 1",
-      "siSo": 0
+      "siSo": 2
     },
     {
       "id": 2,
       "className": "Lớp 2",
-      "siSo": 0
+      "siSo": 2
     }
   ],
   "student": [
