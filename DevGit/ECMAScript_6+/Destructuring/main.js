@@ -40,8 +40,9 @@ console.log(name)
 var {name : ParentName, children : {name}} = coures;
 console.log(ParentName, name)
 // trường hợp ...tên :là toán tử rest còn lại là spread
-function logger(...params){
+function logger(a,...params){
     console.log(params) // trả về 1 array
-    
+    console.log(a)
+    //rest lấy ra các phần tử còn lại
 }
 logger(1,2,3)
