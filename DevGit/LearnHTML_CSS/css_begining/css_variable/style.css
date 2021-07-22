@@ -1,0 +1,20 @@
+:root {
+    --demo-color : red;
+    /* Đặt theo kiểu global tất cả đều được sử dụng biến này*/
+}
+/*
+  cách đặt biến :dùng 1 lớp giả root
+  --ten-kiểu 
+  đặt biến để dễ dàng quản lí  
+*/
+h1 {
+    /* Đặt theo kiểu local chỉ mình h1 được sử dụng biến my-color*/
+    --my-color : green;
+    color: var(--my-color);
+}
+h2 {
+    color: var(--demo-color);
+}
+h3 {
+    color: var(--demo-color);
+}
