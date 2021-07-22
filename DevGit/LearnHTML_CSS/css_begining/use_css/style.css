@@ -1,0 +1,9 @@
+/* có 3 cách sử dụng css trong file html 
+   thứ nhất Internal
+   thứ hai External
+   thứ ba inline
+*/
+/* cách dùng External */
+h1 {
+    font-size: 20px;
+}
