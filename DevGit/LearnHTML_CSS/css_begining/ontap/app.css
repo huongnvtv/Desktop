@@ -1,0 +1,15 @@
+.header.active {
+    color: orangered;
+}
+.container .header {
+    background-color: peru;
+}
+div.main {
+    color: purple;
+}
+.container p {
+    color: salmon;
+}
+.parent > .children {
+    color: slateblue;
+}
