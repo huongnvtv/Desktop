@@ -1,0 +1,37 @@
+/* dùng id có thêm dấu # đặt trước tên id
+   id chỉ được dùng 1 lần
+*/
+#first-heading {
+    color: red;
+    font-size: 42px;
+}
+/*
+  Nếu muốn dùng nhiều element có cùng style thì dùng class 
+*/
+.h1-item {
+    color: skyblue;
+}
+/* css Selector */
+/* 1.css cho element có cả class h1-item và active 
+   Lưu ý :phải viết sát nhau   
+*/
+.h1-item.active {
+    color: olivedrab;
+}
+/* 2.Chọn tất cả các thẻ có class = "footer" và class con là "ending" */
+.footer .ending {
+    font-size: 25px;
+    color: palegreen;
+}
+/* 3.chọn tất cả thẻ h1 trong thẻ div */
+div h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* chọn tất cả thẻ h1 là con trực tiếp của thẻ div*/
+div > h1 {
+    font-size: 20px;
+}
+/* chọn thẻ có class là app liền kề với thẻ có class là .h1-item.active */
+.h1-item.active + .app {
+    background-color: pink;
+}
