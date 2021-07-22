@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Inline có độ ưu tiên cao hơn id,class,tag */
+        /*
+           id có độ ưu tiên cao hơn class nên sẽ ghi đè lại class
+        */
+        /* ông này có 1101 điểm sẽ thắng  */
+        h1#id-heading.heading {
+            color: rgb(43, 204, 56);
+        }
+        /* Gọi cả id và class sẽ được tổng cộng 1100 điểm sẽ thắng id */
+        #id-heading.heading {
+            color: rgb(233, 22, 40);
+        }
+        #id-heading {
+            color: violet;
+        }
+        /* gọi lại 1 lần nữa thì ông nào mới hơn sẽ dùng ông đấy */
+        #id-heading {
+            color: hotpink;
+        }
+        /*dùng .heading sẽ ghi đè lại color tag h1 vì có độ ưu
+          tiên cao hơn nhưng vẫn giữ opacity của tag h1
+        */
+        .heading {
+            color: seagreen;
+        }
+        h1 {
+            color: red;
+            opacity: 0.5;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" >
 </head>
 <body>
-    
+    <div>
+        <h1 id="id-heading" class="heading">Priority Css</h1>
+        <ol>
+            <li>Internal, External</li>
+            <li>Inline - 1000</li>
+            <li>#id - 100</li>
+            <li>.class - 10</li>
+            <li>tag - 1</li>
+            <li>Equal specificity?</li>
+            <li>Universal selector(css chung *) and inherited?(thừa hưởng từ cha)</li>
+        </ol>
+    </div>
 </body>
 </html>

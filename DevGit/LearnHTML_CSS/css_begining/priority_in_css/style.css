@@ -1,0 +1,9 @@
+/* Giữa internal và external sẽ không có sự yêu tiên nào cao hơn
+   cả ai dùng sau thì sẽ chọn cái sau
+   Ưu tiên css nào viết mới hơn thì dùng
+*/
+h1 {
+    color: pink;
+}
+/* Phần tử gọi css cái nào nhiều điểm hơn thì ưu tiên hơn */
+/* !important :thắng tất cả các loại */
