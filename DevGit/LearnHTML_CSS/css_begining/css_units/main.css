@@ -1,0 +1,52 @@
+/* Đơn vị trong css */
+/* 1. Px : là một điểm ảnh 
+   2. % : chiếm bao nhiêu phần trăm của 1 khối
+   Chú ý : bên đơn vị tương đối đều cần một nơi để nó phụ thuộc 
+   vào 
+*/
+.box{
+    height: 100px;
+    width: 50%;
+    /*50% là phụ thuộc vào thẻ chứa nó là thẻ cha của nó là thẻ body */
+    background-color: palegreen;
+}
+.sub-box{
+    height: 50%;
+    width: 50%;
+    background-color:purple ;
+}
+/* 
+   3.Rem phụ thuộc vào thẻ html
+*/
+html{
+    font-size: 20px;
+}
+h1{
+    font-size: 1rem;
+    /* font-size bằng với font-size của thẻ html
+       => font-size của thẻ h1 là 20px
+    */
+}
+/*
+   4.em phụ thuộc vào thẻ gần nhất chứa nó mà được css font-size
+*/
+h2 {
+    font-size: 2em;
+    /*
+      thẻ h2 sẽ tìm thằng cha nó là thẻ div không dc css font-size
+      nên sẽ tìm ông nội nó là thẻ body cũng ko dc css font-size
+      tiếp theo sẽ tìm cụ nó là thẻ html được css font-size là 20px
+      --> 1em = 20px
+    */
+}
+/*
+   vw - width ; vh - height
+   vd:
+*/
+.main{
+   width: 50vw;
+   /* 50vw bằng 50% kích thước chiều ngang trình duyệt */
+   height: 10vh;
+   /* 10vh bằng 10% kích thước chiều dọc của trình duyệt */
+   background-color: royalblue;
+}

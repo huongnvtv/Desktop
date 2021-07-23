@@ -1,0 +1,16 @@
+.box {
+    width: 50vw;
+    height: calc(40px *2);
+    background-color: rgb(243,343,342);
+}
+/* sử dụng lớp giả và hàm attr để lấy nội dung href cho vào content*/
+a::after {
+    content: "("attr(href)")";
+    /* Muốn nối () này thì mới cần dùng như vậy */
+}
+/*
+  dùng attr() để viết tên vào box
+*/
+.box::after {
+    content: attr(data-title);
+}
