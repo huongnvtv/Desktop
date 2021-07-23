@@ -1,5 +1,7 @@
 :root {
     --demo-color : red;
+    --test :orange;
+    --size : 20px;
     /* Đặt theo kiểu global tất cả đều được sử dụng biến này*/
 }
 /*
@@ -17,4 +19,8 @@ h2 {
 }
 h3 {
     color: var(--demo-color);
+}
+h4 {
+    color: var(--test);
+    font-size: var(--size);
 }

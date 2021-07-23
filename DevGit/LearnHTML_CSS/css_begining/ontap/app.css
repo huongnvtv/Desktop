@@ -1,15 +1,16 @@
-.header.active {
-    color: orangered;
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
 }
-.container .header {
-    background-color: peru;
+.main {
+    width: 50%;
+    height: 50%;
+    background-color: palegreen;
 }
-div.main {
-    color: purple;
+.html {
+    font-size: 10px;
 }
-.container p {
-    color: salmon;
-}
-.parent > .children {
-    color: slateblue;
+#test {
+    font-size: 4rem;
 }
