@@ -1,0 +1,30 @@
+/*
+  :root :tham chiếu tới chính phần tử gốc trong file html (cặp
+  thẻ bao trùm toàn bộ tài liệu )
+  ở đây là html
+  :hover được sử dụng để css khi di chuột vào
+*/
+h1:hover {
+    color: red;
+}
+/*
+  :active :kích hoạt khi bấm vào một phần tử 
+*/
+.box {
+    background-color: rosybrown;
+    width: 100px;
+    height: 100px;
+}
+.box:active {
+    background-color: seagreen;
+}
+/* 
+  :first-child và :last-child dùng để css cho đứa con đầu tiên
+  và đứa con cuối cùng
+*/
+li:first-child {
+    color: skyblue;
+}
+li:last-child {
+    color: teal;
+}
