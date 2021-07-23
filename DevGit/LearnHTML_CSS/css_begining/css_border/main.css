@@ -15,6 +15,15 @@
 .box-3 {
     background-color: firebrick;
     /* padding-top: 10px; */
-    padding: 10px 12px 6px 8px;
+    padding: 10px;
     /* đệm thêm cho element trên top 10px*/
+    /* border */
+    border-width: 10px;
+    border-style: solid;
+    border-color: #333;
+    /*
+      border và padding đều làm tăng kích thước của element lên
+      mặc định kiểu border-style : solid là 2px
+      */
+     
 }
