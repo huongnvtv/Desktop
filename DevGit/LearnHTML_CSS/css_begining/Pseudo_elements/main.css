@@ -1,5 +1,47 @@
 /* 
   kĩ thuật này dùng để tạo ra những phần tử hiển thị trên wed
   mà không cần viết code html chỉ cần viết css
-  
+*/
+/* 
+  ::before : luôn là element đứng ở đầu
+  ::after : luôn là element đứng ở cuối
+*/
+.box::before {
+    content: "luôn đứng đầu"; 
+    /* content là phần không thể thiếu */
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+}
+.box::after {
+    content: "luôn đứng cuối"; 
+    /* content là phần không thể thiếu */
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color:yellow;
+}
+/* 
+  ::first-letter : css cho chữ cái đầu tiên của element
+*/
+h1::first-letter {
+   font-size: 40px;
+   color: red;
+}
+/* 
+  ::first-line : css cho dòng đầu tiên
+*/
+h1::first-line {
+    color:sandybrown;
+ }
+ /* 
+  ::selection : css cho phần tử khi bôi chuột vào
+ */
+h1::selection{
+    background-color: seagreen;
+}
+/* 
+  Nếu bỏ thẻ h1 đi thành ::selection thì tất cả phần tử đều 
+  chịu ảnh hướng
 */
