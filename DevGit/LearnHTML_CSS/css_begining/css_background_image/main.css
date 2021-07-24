@@ -1,0 +1,20 @@
+.header {
+    width: 200px;
+    height: 200px;
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPygX21ktJbKaVlLeWF7DcB9cI0sdoV-ycZQ&usqp=CAU)
+    ,url(data:image/jpeg;base64,/9j/4AAQSkZJRgA); */
+    /* một background-image có thể có nhiều ảnh (nhiều url)*/
+    /* có thể dùng linear-gradient()*/
+    background-image: linear-gradient(0,rgba(255,255,0,0.5),rgba(0,0,255,0.3))
+    ,url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPygX21ktJbKaVlLeWF7DcB9cI0sdoV-ycZQ&usqp=CAU);
+    /* background-size: 100%; */
+    /* background-size :kích thước hình nền */
+    /* background-size: contain; */
+    /* lấy kích thước chiều nào lớn hơn làm khung nhìn của
+     hình ảnh và không được che đi bất cứ phần nào của bức ảnh */
+    background-size: cover;
+    /* chọn phần chiều lớn hơn của bức ảnh làm khung nhìn
+       và chấp nhận bị che khuất
+       */
+    background-repeat: no-repeat;
+}
