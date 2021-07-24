@@ -1,0 +1,16 @@
+.box {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    padding: 20px;
+    border:2px solid gold;
+    box-sizing: border-box;
+    /* mặc định là content-boxư
+       unset là hủy cái đang xét */
+}
+.box-1 {
+    background-color: #333;
+}
+/* box-sizing : giữ kích thước cố định của 1 box dưới sự tác
+   động của một số cái vd : padding,border
+*/
