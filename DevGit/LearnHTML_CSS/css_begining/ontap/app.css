@@ -1,16 +1,12 @@
-.box {
+.box::before {
+    width: 100px;
+    height: 100px;
+    background-color: sienna;
+    display: block;
+    content: "test";
+}
+.box{
     width: 200px;
     height: 200px;
-    background-color: orangered;
-}
-.main {
-    width: 50%;
-    height: 50%;
-    background-color: palegreen;
-}
-.html {
-    font-size: 10px;
-}
-#test {
-    font-size: 4rem;
+    background-color: silver;
 }
