@@ -7,16 +7,16 @@
     <title>Document</title>
     <style>
         /*
-            position :fixed : dùng để cố định một khối trong trình
-            duyệt
+            position :sticky :dùng để tạo header bám dính
         */
         .box {
+            margin-top: 40px;
             width: 100%; /* = right : 0 ; left :0 */
             height: 120px;
             background-color: darkorange;
-            position: fixed;
-            /* top: 0; */
-            bottom: 0;
+            position: sticky;
+            top: 0;
+            content: attr("header");
         }
         h1{
             margin-top: 150px;
