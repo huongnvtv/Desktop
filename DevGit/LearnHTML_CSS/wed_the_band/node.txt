@@ -1,0 +1,26 @@
+Những thành phần thường gặp trên một wedsite:
+1.Header (đầu trang)
+2.Navigation(điều hướng) : Nơi có các nút bấm hoặc link điều
+hướng đến trang khác trong wed
+3.Breadcrum : cho biết mình hiện tại đang ở trang nào
+vd : Khóa học > HTML,CSS
+4.Siderbar : một thanh đặt ở 1 phía của màn hình (trái hoặc bên
+phải màn hình đó chính là menu(cũng có thể coi là navigation phụ))
+5.Slider : gồm một list ảnh chạy tuần tự 
+6.Content : nội dung chính giữa trang wed
+7.Footer(chân trang) : ở cuối trang wed
+8.Banner : ảnh đặt ở 1 vị trí trong wed (thường là ảnh quảng cáo)
+Link wedsite mẫu :https://www.w3schools.com/w3css/tryw3css_templates_band.htm#
+Phân tích :
+1.Header
+2.Slider
+3.Content
+  a.About(giới thiệu)
+  b.Tour
+  c.Contact
+  d.Image
+4.footer
+Trang này gọi là trang one page
+
+các bước tiến hành làm wed:
+phân tich > Dựng base(xây móng) > Xây dựng từng phần theo phân tích > Hoàn thiện
