@@ -1,0 +1,75 @@
+/* Reset Css */
+* {
+    /* Emmet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* một số phím tắt :
+ ctrl + shitf + L : bôi đen tất cả chữ giống nhau
+ ctrl + D : nhấn D liên tục để bôi đen
+ ctrl + D + -> : chuyển bôi đen sang nhấp nháy tiếp theo 
+ alt + shift + -> : bôi đen các cục phía sau
+*/
+/* alt click chuột tạo các gạch nhấp nháy để viết
+   vào nhiều chỗ một lúc
+*/
+/* 
+  Nguyên tắc làm việc :
+  1.Từ ngoài vào trong
+  2.Từ trên xuống dưới
+  3.Từ tổng quan đến chi tiết
+*/
+/* 
+  làm một wedsite nên để ý :
+  1. Vị trí
+  2. Kích thước (width, height)
+  3. Màu sắc
+  4. Kiểu dáng (kiểu chứ, hình tròn, vuông, ...)
+*/
+#main {
+   
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+   height: 46px;
+   background-color: #000;
+}
+
+#nav {
+  
+}
+
+#nav li {
+  display: inline-block;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+  font-size: 18px;
+}
+
+#nav li a :hover {
+  
+}
+#nav .subnav {
+  display: none;
+}
+#slider {
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
