@@ -56,8 +56,10 @@ html {
   font-size: 18px;
 }
 
-#nav li a :hover {
-  
+#nav li:hover a{ /* khi hover vào thẻ li là con của nav thì con của thẻ li được hover */
+  color: #000;
+  background-color: #ccc;
+  display: inline-block; /* mặc định của thẻ a là inline nên không xét được kích thước */
 }
 #nav .subnav {
   display: none;
