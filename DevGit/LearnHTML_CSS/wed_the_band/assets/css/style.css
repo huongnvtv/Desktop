@@ -40,32 +40,54 @@ html {
    background-color: #000;
 }
 
-#nav {
-  
+#nav,.subnav {
+  list-style-type: none; /* loại bỏ dấu chấm mặc định do thẻ ul sinh ra */
 }
-
-#nav li {
+#nav > li{
   display: inline-block;
 }
 
-#nav li a {
+#nav li {
+  position: relative;
+}
+#nav >li > a {
   color: #fff;
+  text-transform: uppercase;
+}
+#nav li a {
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
   font-size: 18px;
+  display: block; /* mặc định của thẻ a là inline nên không xét được kích thước */
 }
 
-#nav li:hover a{ /* khi hover vào thẻ li là con của nav thì con của thẻ li được hover */
+#nav > li:hover > a ,/* khi hover vào thẻ li là con của nav thì con của thẻ li được hover */
+#nav .subnav li:hover a{
   color: #000;
   background-color: #ccc;
-  display: inline-block; /* mặc định của thẻ a là inline nên không xét được kích thước */
 }
+
 #nav .subnav {
   display: none;
+  min-width: 160px; /* chiều rộng tối thiểu */
+  position: absolute;
+  top: 100%; /* nó lấy chính chiều cao của thẻ cha chứa nó  */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-#slider {
+#nav li:hover .subnav { /* di vào li hiện con của nó là subnav */
+  display: block;
+}
+#nav .subnav a {
+  color: #000;
+  padding: 0 12px;
+  line-height: 38px;
+}
 
+#slider {
+  
 }
 
 #content {
