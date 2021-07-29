@@ -13,7 +13,9 @@ html {
    height: 46px;
    background-color: #000;
 }
-
+#nav {
+    display: inline-block;
+}
 #nav li{
     display: inline-block;
     position: relative;
@@ -52,6 +54,22 @@ html {
     line-height: 38px;
     padding: 0 16px;
     display: block;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+#header .search-btn {
+    float: right;
+    
+}
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .ti-search {
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
 }
 #slider {
   
