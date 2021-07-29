@@ -19,24 +19,42 @@ html {
     position: relative;
 }
 #nav > li > a {
+   text-transform: uppercase;
+}
+#nav li  a {
     padding: 0 24px;
-    display: inline-block;
+    display: block;
     color: #fff;
     text-decoration: none;
     line-height: 46px;
     font-size: 18px;
 }
-#nav li:hover a {
-    color: #fff;
+#nav > li:hover > a, 
+#nav .subnav li:hover a {
+    color: #000;
     background-color: #ccc;
 }
 #nav .subnav {
     position: absolute;
+    display: none;
     background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav li {
+    display: block;
+}
+#nav .subnav a {
+    color: #000;
+    line-height: 38px;
+    padding: 0 16px;
+    display: block;
 }
 #slider {
-   min-height: 300px;
-   background-color: #333;
+  
 }
 
 #content {
