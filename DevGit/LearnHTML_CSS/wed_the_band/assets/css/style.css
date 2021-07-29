@@ -39,7 +39,9 @@ html {
    height: 46px;
    background-color: #000;
 }
-
+#nav {
+  display: inline-block;
+}
 #nav,.subnav {
   list-style-type: none; /* loại bỏ dấu chấm mặc định do thẻ ul sinh ra */
 }
@@ -85,7 +87,24 @@ html {
   padding: 0 12px;
   line-height: 38px;
 }
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
 
+#header .search-button {
+   float: right;
+   padding: 0 21px;
+}
+
+#header .search-button:hover {
+  cursor: pointer;
+  background-color: #f44336;
+}
+#header .search-icon{
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+}
 #slider {
   
 }
