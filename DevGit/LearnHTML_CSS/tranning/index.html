@@ -6,29 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box-1 {
-            background-color: cadetblue;
-            width: 200px;
-            height: 100px;
-            display: inline-block;
-        }
-        .box-2 {
-            background-color: chocolate;
-            width: 200px;
-            height: 100px;
-            display: inline-block;
-        }
-        .sub-box-1 {
-            background-color: cyan;
-            display: inline-block;
-        }
+    .main-element {
+        position: sticky;
+        top: 10px;
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    html {
+        height: 800px;
+    }
     </style>
 </head>
 <body>
-    <div class="box-1">
-        Box-1
-        <div class="sub-box-1">Sub-box-1</div>
+    <div class="parent-element">
+        <div class="sibling-element">
+            I'm the other sibling element.
+        </div>
+        
+        <div class="main-element">
+            All eyes on me. I am the main element.
+        </div>
+        
+        <div class="sibling-element">
+            I'm the other sibling element.
+        </div>
     </div>
-    <div class="box-2">Box-2</div>
 </body>
 </html>
