@@ -33,6 +33,10 @@
      nên sẽ dùng clear : both để thằng cha ôm được thằng con
   */
 }
+.text-white { /* sử dụng để chuyển tất cả các div ra màu chữ là trắng */
+  color: #fff !important;
+
+}
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -184,6 +188,39 @@ html {
   width: 154px;
   border-radius: 4px;
 }
+/* Tour section */
+.tour-section {
+  background-color: #000;
+}
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+}
+.tickets-list li {
+  font-size: 15px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+  list-style-type: none
+}
+.tickets-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.tickets-list .quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -3px; /* phải có thuộc tính float thì mới dùng margin âm được */
+}
+/* Footer section */
 #footer {
  height: 100px;
 }
