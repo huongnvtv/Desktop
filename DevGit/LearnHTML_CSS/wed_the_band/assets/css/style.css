@@ -27,6 +27,12 @@
   3. Màu sắc
   4. Kiểu dáng (kiểu chứ, hình tròn, vuông, ...)
 */
+.clear {
+  clear: both; 
+  /* khi dùng float thì con là float là thằng cha sẽ không ôm được thằng con 
+     nên sẽ dùng clear : both để thằng cha ôm được thằng con
+  */
+}
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -156,6 +162,27 @@ html {
   font-size: 15px;
   text-align: justify; /* dùng để căn chỉnh đều 2 bên của đoạn văn bản */
   line-height: 1.4; /* chiều cao của từng dòng */
+}
+#content .members-list {
+   margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    /* width: 33.33333%; */
+    width: calc(100% /3);
+    text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+
+}
+
+#content .member-avatar {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 4px;
 }
 #footer {
  height: 100px;
