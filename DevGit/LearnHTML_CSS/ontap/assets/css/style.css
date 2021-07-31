@@ -99,8 +99,29 @@ html {
 #slider .text-writing {
     font-size: 15px;
 }
-#content {
-  height: 2000px;
-  background-color: #ccc;
-}
 
+#content .content-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+#content .section-heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading {
+    text-align: center;
+    opacity: 0.6;
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+#content .about-text {
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
