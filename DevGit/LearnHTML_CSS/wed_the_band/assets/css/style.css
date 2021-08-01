@@ -49,6 +49,8 @@ html {
    height: 46px;
    background-color: #000;
    z-index: 1; /* độ sâu của các khối theo trục oz */
+   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
 }
 #nav {
   display: inline-block;
@@ -219,6 +221,62 @@ html {
   text-align: center;
   line-height: 24px;
   margin-top: -3px; /* phải có thuộc tính float thì mới dùng margin âm được */
+}
+
+/* Places */
+.places-list {
+  margin-top: 32px;
+  margin-left: -8px; 
+  margin-right: -8px;
+  padding-bottom: 48px;
+}
+
+.place-item {
+  float: left;
+  width: calc(100% /3);
+  padding: 0 8px;
+}
+.place-img {
+  width: 100%;
+  display: block; /* do ban đầu display :inline nên nó sẽ đẩy thằng display:block ra 1 tí */
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+.place-body {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.place-body .place-heading {
+  font-size: 15px;
+  
+}
+
+.place-body .play-time {
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+.place-body .play-decription {
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.place-body .place-buy-btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none; /* bỏ gạch chân mặc định của thẻ a */
+  padding: 8px 16px;
+  display: inline-block; /* vì ban đầu mặc định là thẻ inline nên nó sẽ không có chạm
+  vào khối ở trên là thẻ block */
+}
+
+.place-body .place-buy-btn:hover {
+  background-color: #ccc;
+  color: #000;
 }
 /* Footer section */
 #footer {
