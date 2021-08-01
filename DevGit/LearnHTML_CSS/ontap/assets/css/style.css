@@ -180,10 +180,52 @@ html {
     color: #ffff;
 }
 .places-list {
-    padding: 32px 8px;
+    margin-top: 32px;
+    padding-bottom: 48px;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 .places-list .place-item {
     float: left;
     width: calc(100% /3);
     padding: 0 8px;
+}
+
+.places-list .place-body {
+    background-color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.places-list .place-img {
+    width: 100%;
+    display: block;
+}
+.places-list .place-img:hover {
+    opacity: 0.6;
+}
+.place-body .place-heading {
+    padding: 15px 0;
+    font-size: 15px;
+}
+.place-body .play-time {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+.place-body .play-decription {
+    margin: 15px 0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.place-body .place-buy-btn {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.place-body .place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
 }
