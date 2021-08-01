@@ -179,3 +179,11 @@ html {
     border-radius: 50%;
     color: #ffff;
 }
+.places-list {
+    padding: 32px 8px;
+}
+.places-list .place-item {
+    float: left;
+    width: calc(100% /3);
+    padding: 0 8px;
+}
