@@ -240,7 +240,10 @@ html {
   width: 100%;
   display: block; /* do ban đầu display :inline nên nó sẽ đẩy thằng display:block ra 1 tí */
 }
-
+.place-item .place-buy-btn {
+  border: none;
+  cursor: pointer;
+}
 .place-img:hover {
   opacity: 0.6;
 }
@@ -298,12 +301,16 @@ html {
 .modal.open {
   display: flex;
 }
+.modal.open {
+  display: flex;
+}
 .modal-container {
   background-color: #fff;
   width: 900px;
   max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
+  animation: modalFadeIn ease 0.5s; /* dùng để tạo hoạt ảnh từ trên xuống  */
 }
 .modal-header {
   background-color: #009688;
@@ -364,4 +371,15 @@ html {
 }
 .modal-footer .modal-help a{
   color: #009688;
+}
+/* dùng để tạo hoạt ảnh khi nhấn vào buy ticket thì cửa sổ mở ra từ trên xuống */
+@keyframes modalFadeIn {
+  from {
+     opacity: 0;
+     transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
