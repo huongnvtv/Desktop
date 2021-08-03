@@ -319,9 +319,7 @@ html {
 .modal.open {
   display: flex;
 }
-.modal.open {
-  display: flex;
-}
+
 .modal-container {
   background-color: #fff;
   width: 900px;

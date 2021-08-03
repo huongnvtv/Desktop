@@ -224,10 +224,12 @@ html {
     text-decoration: none;
     margin-bottom: 15px;
     display: inline-block;
+    border: none;
 }
 .place-body .place-buy-btn:hover {
     background-color: #ccc;
     color: #000;
+    cursor: pointer;
 }
 .modal {
     position: fixed;
@@ -236,16 +238,19 @@ html {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
     align-items: center;
     justify-content: center;
     display: none;
+}
+.modal.open {
+    display: flex;
 }
 .modal-container {
     background-color: #fff;
     width: 900px;
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 2.5;
 }
 .modal .modal-header {
     background-color: #009688;
@@ -308,4 +313,14 @@ html {
 }
 .modal-footer .modal-help a {
     color: #009688;
+}
+@keyframes modalFadeIn {
+    from {
+       opacity: 0;
+       transform: translateY(-140px);
+    }
+    to {
+       opacity: 1;
+       transform: translateY(0);
+    }
 }
