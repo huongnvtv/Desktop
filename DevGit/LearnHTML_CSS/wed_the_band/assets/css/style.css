@@ -27,6 +27,7 @@
   3. Màu sắc
   4. Kiểu dáng (kiểu chứ, hình tròn, vuông, ...)
 */
+/* Common */
 .clear {
   clear: both; 
   /* khi dùng float thì con là float là thằng cha sẽ không ôm được thằng con 
@@ -41,6 +42,23 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-haft {
+  width: calc(100% /2);
+}
+.col-third {
+  width: calc(100% /3);
+}
+/* Main */
 #header {
    position: fixed;
    top: 0;
@@ -226,24 +244,21 @@ html {
 /* Places */
 .places-list {
   margin-top: 32px;
-  margin-left: -8px; 
-  margin-right: -8px;
+  /* margin-left: -8px; 
+  margin-right: -8px; */
   padding-bottom: 48px;
 }
 
-.place-item {
-  float: left;
+/* .place-item {
   width: calc(100% /3);
+  float: left;
   padding: 0 8px;
-}
+} */
 .place-img {
   width: 100%;
   display: block; /* do ban đầu display :inline nên nó sẽ đẩy thằng display:block ra 1 tí */
 }
-.place-item .place-buy-btn {
-  border: none;
-  cursor: pointer;
-}
+
 .place-img:hover {
   opacity: 0.6;
 }
@@ -270,9 +285,11 @@ html {
 
 .place-body .place-buy-btn {
   color: #fff;
+  text-transform: capitalize;
   background-color: #000;
   text-decoration: none; /* bỏ gạch chân mặc định của thẻ a */
   padding: 8px 16px;
+  border: none;
   display: inline-block; /* vì ban đầu mặc định là thẻ inline nên nó sẽ không có chạm
   vào khối ở trên là thẻ block */
 }
@@ -280,6 +297,7 @@ html {
 .place-body .place-buy-btn:hover {
   background-color: #ccc;
   color: #000;
+  cursor: pointer;
 }
 /* Footer section */
 #footer {
@@ -351,6 +369,10 @@ html {
   font-size: 15px;
   padding: 10px 0;
   margin-bottom: 24px;
+  padding-left: 10px;
+}
+.modal-body .modal-input:focus-visible {
+  outline: 1px solid #33FFCC;
 }
 .modal #buy-tickets {
   background-color: #009688;
