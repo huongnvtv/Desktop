@@ -324,3 +324,32 @@ html {
        transform: translateY(0);
     }
 }
+.contact-content {
+    padding: 32px 0;
+    font-size: 17px;
+}
+.contact-content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.contact-content .contact-info {
+    width: 50%;
+    float: left;
+    line-height: 1.5;
+}
+.contact-info i[class*= "ti-"] {
+    width: 30px;
+    height: 18px;
+    display: inline-block;
+}
+.contact-info {
+    font-weight: 500;
+}
+.contact-form {
+    display: inline-block;
+    width: 50%;
+}
+.contact-form .input-control {
+    padding: 8px
+}
