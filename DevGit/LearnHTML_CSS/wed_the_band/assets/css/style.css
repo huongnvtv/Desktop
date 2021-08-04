@@ -46,7 +46,11 @@ html {
   margin-left: -8px;
   margin-right: -8px;
 }
-
+.row::after { /* tạo ra một element giả để fix lỗi dùng float thẻ cha không ôm được thẻ con */
+  content: "";
+  display: block;
+  clear: both;
+}
 .col {
   float: left;
   padding-left: 8px;
@@ -60,6 +64,12 @@ html {
 }
 .col-third {
   width: calc(100% /3);
+}
+.mt-8 {
+   margin-top: 8px !important;
+}
+.mt-16 {
+  margin-top: 16px !important;
 }
 /* Main */
 #header {
@@ -412,4 +422,28 @@ html {
 }
 .contact-info {
   font-size: 18px;
+  line-height: 1.5;
+}
+.contact-info i[class*="ti-"] { /* tìm thẻ i có chứa class bắt đầu bằng 'ti-' */
+   width: 30px;
+   display: inline-block;
+}
+.contact-form {
+  font-size: 15px; 
+  float: right;
+}
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.contact-form .form-control:focus-visible {
+  outline: 1px solid #0066ff;
+}
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  float: right;
 }
