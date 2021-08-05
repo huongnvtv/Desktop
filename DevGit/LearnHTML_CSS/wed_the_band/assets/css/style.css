@@ -477,3 +477,6 @@ html {
 #footer .copy-right a {
   color: rgb(0,0,0, 0.6);
 }
+#footer {
+  width: 200px;
+}
