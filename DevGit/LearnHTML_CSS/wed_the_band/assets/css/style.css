@@ -176,7 +176,7 @@ html {
 }
 #content .content-section {
   width: 800px;
-  padding: 64px 0;
+  padding: 64px 0 112px;
   margin-left: auto; /* dùng margin-left và right auto để căn giữa */
   margin-right: auto;
 }
@@ -259,7 +259,7 @@ html {
   margin-top: 32px;
   /* margin-left: -8px; 
   margin-right: -8px; */
-  padding-bottom: 48px;
+  /* padding-bottom: 48px; */
 }
 
 /* .place-item {
@@ -311,10 +311,6 @@ html {
   background-color: #ccc;
   color: #000;
   cursor: pointer;
-}
-/* Footer section */
-#footer {
- height: 100px;
 }
 
 /* Buy tickets modal : đây là kiểu giao diện modal */
@@ -446,4 +442,37 @@ html {
   border: none;
   padding: 8px 16px;
   float: right;
+}
+.contact-form .form-submit-btn:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #ccc;
+}
+/* Map section */
+.map-section img {
+  width: 100%;
+}
+/* Footer section */
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+#footer .socials-list {
+  font-size: 24px;
+}
+#footer .socials-list a {
+  text-decoration: none;
+  color: rgb(0,0,0, 0.6);
+}
+#footer .copy-right a:hover,
+#footer .socials-list a:hover {
+  opacity: 0.6;
+}
+#footer .copy-right {
+  margin: 15px 0;
+  font-size: 15px;
+  color: rgb(0,0,0, 0.6);
+}
+#footer .copy-right a {
+  color: rgb(0,0,0, 0.6);
 }
