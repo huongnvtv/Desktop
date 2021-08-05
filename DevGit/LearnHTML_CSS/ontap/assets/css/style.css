@@ -391,3 +391,27 @@ html {
     color: #000;
     background-color: #ccc;
 }
+.map-section .map-item{
+    filter: grayscale(50%);
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .socials-list {
+    font-size: 24px;
+}
+#footer .socials-list a{
+   text-decoration: none;
+   color: rgba(0, 0, 0, 0.6);
+}
+#footer .socials-list a:hover {
+    opacity: 0.6;
+}
+#footer .copy-right {
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
+}
