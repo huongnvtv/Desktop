@@ -6,21 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    .parent-element {
-       width: 200px;
-       height: 200px;
-       background-color: darkorange;
-       padding: 20px;
-       box-sizing: border-box;
-    }
-    html {
-        height: 800px;
-    }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .row {
+          margin-left: -8px;
+          margin-right: -8px;
+        }
+       .col {
+           float: left;
+           padding-left: 8px;
+           padding-right: 8px;
+       }
+       .item {
+           text-align: center;
+           height: 200px;
+        }
+        .item-1 {
+           background-color: cornflowerblue;
+       }
+       .item-2 {
+           background-color: darkgoldenrod;
+       }
+       .item-3 {
+           background-color: darksalmon;
+       }
+       .col-3 {
+           width: calc(100% /3);
+       }
+       .col-2 {
+           width: 50%;
+       }
     </style>
 </head>
 <body>
-    <div class="parent-element">
-        box-shadow
+    <div class="row">
+        <div class="col col-3 item item-1">col-1</div>
+        <div class="col col-3 item item-2">
+            col-2
+            <div class="row">
+                <div class="col col-2 item-1">sub-col-1</div>
+                <div class="col col-2 item-3">sub-col-2</div>
+            </div>
+        </div>
+        <div class="col col-3 item item-3">col-3</div>
     </div>
 </body>
 </html>
