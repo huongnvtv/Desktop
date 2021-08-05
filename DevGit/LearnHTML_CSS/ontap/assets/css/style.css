@@ -347,9 +347,47 @@ html {
     font-weight: 500;
 }
 .contact-form {
-    display: inline-block;
+    float: left;
     width: 50%;
 }
 .contact-form .input-control {
     padding: 8px
+}
+.row-colum {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row-colum::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-half {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+    width: calc(100% /2);
+}
+.contact-form .input-control {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.contact-form .ip-message {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.contact-form .input-control:focus-visible {
+   outline: 1px solid#3399FF;
+}
+.contact-form .btn-submit {
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    float: right;
+}
+.contact-form .btn-submit:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
 }
