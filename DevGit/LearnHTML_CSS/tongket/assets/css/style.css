@@ -1,0 +1,37 @@
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+    height: 46px;
+    background-color: #000;
+    font-size: 15px;
+}
+#header > li {
+    display: inline-block;
+    padding: 0 24px;
+    line-height: 46px;
+    position: relative;
+}
+#header > li > a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+#header .sub-menu {
+    position: absolute;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#header .sub-menu li {
+
+}
+#header .sub-menu a {
+    color: #000;
+    text-decoration: none;
+}
