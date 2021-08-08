@@ -6,57 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html {
+            scroll-behavior: inherit;
+        }
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .row::after {
-            content: "";
-            display: block;
-            clear: both;
+        #header {
+            background-color: cornflowerblue;
+            height: 1000px;
         }
-        .row {
-          margin-left: -8px;
-          margin-right: -8px;
+        #slider {
+            background-color: crimson;
+            height: 500px;
         }
-       .col {
-           float: left;
-           padding-left: 8px;
-           padding-right: 8px;
-       }
-       .item {
-           text-align: center;
-           height: 200px;
+        #content {
+            background-color: darkgoldenrod;
+            height: 1000px;
         }
-        .item-1 {
-           background-color: cornflowerblue;
-       }
-       .item-2 {
-           background-color: darkgoldenrod;
-       }
-       .item-3 {
-           background-color: darksalmon;
-       }
-       .col-3 {
-           width: calc(100% /3);
-       }
-       .col-2 {
-           width: 50%;
-       }
+        .menu {
+            position: fixed;
+            top: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col col-3 item item-1">col-1</div>
-        <div class="col col-3 item item-2">
-            col-2
-            <div class="row">
-                <div class="col col-2 item-1">sub-col-1</div>
-                <div class="col col-2 item-3">sub-col-2</div>
-            </div>
-        </div>
-        <div class="col col-3 item item-3">col-3</div>
+    <ul class="menu">
+        <a href="#header">header</a>
+        <a href="#slider">slider</a>
+        <a href="#content">content</a>
+        <a href="#footer">footer</a>
+    </ul>
+    <div id="header">
+          header
+    </div>
+    <div id="slider">
+           slider
+    </div>
+    <div id="content">
+          content
+    </div>
+    <div id="footer">
+          footer
     </div>
 </body>
 </html>
