@@ -6,50 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html {
-            scroll-behavior: inherit;
+       ul {
+        list-style: none; /* Remove HTML bullets */
+        padding: 0;
+        margin: 0;
         }
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
+
+        li { 
+        padding-left: 16px; 
         }
-        #header {
-            background-color: cornflowerblue;
-            height: 1000px;
-        }
-        #slider {
-            background-color: crimson;
-            height: 500px;
-        }
-        #content {
-            background-color: darkgoldenrod;
-            height: 1000px;
-        }
-        .menu {
-            position: fixed;
-            top: 0;
+
+        li::before {
+        content: "."; /* Insert content that looks like bullets */
+        padding-right: 8px;
+        color: blue; /* Or a color you prefer */
         }
     </style>
 </head>
 <body>
-    <ul class="menu">
-        <a href="#header">header</a>
-        <a href="#slider">slider</a>
-        <a href="#content">content</a>
-        <a href="#footer">footer</a>
+    <h1>The content Property</h1>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
     </ul>
-    <div id="header">
-          header
-    </div>
-    <div id="slider">
-           slider
-    </div>
-    <div id="content">
-          content
-    </div>
-    <div id="footer">
-          footer
-    </div>
 </body>
 </html>
