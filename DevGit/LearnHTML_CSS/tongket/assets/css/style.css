@@ -11,10 +11,18 @@ html {
     margin-left: -8px;
     margin-right: -8px;
 }
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 .col {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
+}
+.col-2 {
+    width: 50%;
 }
 .col-3 {
     width: calc(100% /3);
@@ -241,19 +249,22 @@ html {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
+.modal.open {
+    display: flex;
+}
 .modal .modal-container {
-    position: relative;
+    position: absolute;
     bottom: 70px;
     left: auto;
     right: auto;
     width: 900px;
     min-height: 200px;
     background-color: #fff;
-
+    animation: modalFaceIn ease 0.5s;
 }
 .modal .modal-header {
     padding: 32px 16px;
@@ -316,4 +327,59 @@ html {
 }
 .modal .modal-container .text-help a {
     color: #009688;
+}
+@keyframes modalFaceIn {
+    from {
+       opacity: 0;
+       transform: translateY(-140px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.content-section .contact-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.content-section .contact-section {
+    padding: 32px 0;
+}
+.content-section .contact-section .contact-info {
+    margin: 0 0 16px;
+}
+.contact-section .contact-info p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.contact-section .contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+.contact-section .contact-input .input-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+}
+.contact-section .contact-input {
+    font-size: 18px;
+}
+.contact-section .contact-input .margin-input {
+    margin-bottom: 8px;
+}
+.contact-section .contact-input .btn-contact {
+    margin: 16px 0;
+    padding: 8px 16px;
+    float: right;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.contact-section .contact-input .btn-contact:hover {
+    color: #000;
+    background-color: #ccc;
 }

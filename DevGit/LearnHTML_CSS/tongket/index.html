@@ -125,6 +125,27 @@
         <div class="content-section">
             <h2 class="section-heading">CONTACT</h2>
             <p class="section-sub-heading">Fan? Drop a note!</p>
+            <div class="contact-section row">
+                 <div class="contact-info col col-2">
+                      <p><i class="ti-location-pin"></i>Chicago, US</p>
+                      <p><i class="ti-headphone-alt"></i>Phone: +00 151515</p>
+                      <p><i class="ti-email"> </i>Email: mail@mail.com</p>
+                 </div>
+                 <div class="contact-input col col-2">
+                     <form action="">
+                         <div class="row margin-input">
+                             <div class="col col-2">
+                                  <input class="input-control" required = "" type="text" placeholder="Name">
+                             </div>
+                             <div class="col col-2">
+                                  <input class="input-control" required = "" type="text" placeholder="Email">
+                             </div>
+                         </div>
+                         <input class="input-control" required = "" type="text" placeholder="Message">
+                         <input type="submit" class="btn-contact" value="Send"></input>
+                     </form>
+                 </div>
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -156,5 +177,25 @@
             </div>            
         </div>
     </div>
+    <script>
+        const ticketbtns = document.querySelectorAll('.ticket-btn');
+        const modalJs = document.querySelector('.modal');
+        const modalClose = document.querySelector('.modal-close');
+        const modalContainer = document.querySelector('.modal-container');
+        for(const ticket of ticketbtns) {
+            ticket.addEventListener('click',function(){
+                 modalJs.classList.add('open');
+            })
+        }
+        modalClose.addEventListener('click',function(){
+            modalJs.classList.remove('open');
+        })
+        modalJs.addEventListener('click',function(){
+            modalJs.classList.remove('open');
+        })
+        modalContainer.addEventListener('click',function(event){
+            event.stopImmediatePropagation();
+        })
+    </script>
 </body>
 </html>
