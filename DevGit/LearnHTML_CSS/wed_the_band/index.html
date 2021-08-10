@@ -8,6 +8,7 @@
     <link rel="icon" href= "https://image.flaticon.com/icons/png/512/1753/1753311.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="main">
@@ -33,6 +34,9 @@
             <!--Begin : Search Button-->
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!--End : Search Button-->
         </div>
@@ -227,6 +231,28 @@
         modalContainer.addEventListener('click',function(event){
             event.stopPropagation() // ngừng sự kiện nổi bọt
         })
+    </script>
+    <script>
+        /* Đóng mở mobile menu */
+        const headerElement = document.getElementById('header');
+        const mobileMenu = document.querySelector('.mobile-menu-btn');
+        var headerHeight = headerElement.clientHeight;
+        mobileMenu.addEventListener('click',function(){
+            var isClosed = headerElement.clientHeight === headerHeight; //xem chiều cao của thẻ header
+            if(isClosed) {
+                headerElement.style.height = 'auto';
+            }else {
+                headerElement.style.height = null;
+            }
+
+        })
+        /* khi động đóng khi chọn menu */
+        var listLiElement = document.querySelectorAll('#nav > li');
+        for(var liElement of listLiElement) {
+            liElement.addEventListener('click',function(){
+                headerElement.style.height = null;
+            })
+        }
     </script>
 </body>
 </html>

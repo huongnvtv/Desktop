@@ -82,7 +82,7 @@ html {
    background-color: #000;
    z-index: 1; /* độ sâu của các khối theo trục oz */
    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-
+   overflow: hidden; /* ẩn những thằng con vượt quá kích thước thằng cha */
 }
 #nav {
   display: inline-block;
@@ -135,20 +135,29 @@ html {
 #nav .nav-arrow-down {
   font-size: 14px;
 }
-
+#header .mobile-menu-btn {
+     display: none;
+}
+#header .mobile-menu-btn,
 #header .search-button {
    float: right;
    padding: 0 21px;
 }
-
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
 #header .search-button:hover {
   cursor: pointer;
   background-color: #f44336;
 }
+#header .menu-icon,
 #header .search-icon{
   color: #fff;
   font-size: 20px;
   line-height: 46px;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
 }
 #slider {
   position: relative;
