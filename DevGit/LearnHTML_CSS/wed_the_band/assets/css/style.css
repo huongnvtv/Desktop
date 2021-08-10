@@ -177,9 +177,12 @@ html {
 }
 #content .content-section {
   width: 800px;
+  max-width: 100%; /* khi màn hình trình duyệt không đủ 800px thì width kéo xuống đúng bằng chiều rộng trình duyệt */
   padding: 64px 0 112px;
   margin-left: auto; /* dùng margin-left và right auto để căn giữa */
   margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #content .section-heading {
     font-size: 30px;
