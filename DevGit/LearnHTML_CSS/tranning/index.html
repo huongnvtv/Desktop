@@ -21,12 +21,24 @@
         padding-right: 8px;
         color: blue; /* Or a color you prefer */
         }
+
+        @media (max-width : 800px){
+            /* nhỏ hơn hoặc bằng 800px thì css trong này sẽ chạy min-width thì ngược lại >=800px */
+            .ipad {
+                color: brown;
+            }
+        }
+        /*
+           PC : width >= 1024px
+           Tablet(máy tính bảng) : >= 740px && < 1024px
+           Mobile : < 740px
+        */
     </style>
 </head>
 <body>
     <h1>The content Property</h1>
 
-    <ul>
+    <ul class="ipad">
       <li>Coffee</li>
       <li>Tea</li>
       <li>Coca Cola</li>
