@@ -247,10 +247,15 @@
 
         })
         /* khi động đóng khi chọn menu */
-        var listLiElement = document.querySelectorAll('#nav > li');
-        for(var liElement of listLiElement) {
-            liElement.addEventListener('click',function(){
-                headerElement.style.height = null;
+        var listAElement = document.querySelectorAll('#nav > li > a');
+        for(var AElement of listAElement) {
+            AElement.addEventListener('click',function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav'); 
+                if(isParentMenu != true) {
+                    headerElement.style.height = null;
+                }else {
+                    event.preventDefault(); //bỏ qua sự kiện mặc định của thẻ a
+                }
             })
         }
     </script>

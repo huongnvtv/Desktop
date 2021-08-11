@@ -1,13 +1,24 @@
 /* Mobile */
 @media (max-width : 740px) {
+    #header {
+        overflow: hidden; /* ẩn những thằng con vượt quá kích thước thằng cha */
+    }
     #header .mobile-menu-btn {
         display: block;
     }
     #nav {
         display: block;
     }
+    #nav .subnav {
+        position: initial; /* giá trị mặc định */
+        background-color: #333;
+    }
     #nav > li {
         display: block;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
     }
     #nav > li:first-child {
         display: inline-block;
