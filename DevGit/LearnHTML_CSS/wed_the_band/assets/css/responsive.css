@@ -1,5 +1,13 @@
 /* Mobile */
 @media (max-width : 740px) {
+    
+    .s-full-width,
+    .s-col-full {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px;
+    }
     #header {
         overflow: hidden; /* ẩn những thằng con vượt quá kích thước thằng cha */
     }
@@ -27,4 +35,14 @@
         display: none;
     }
     
+    #content .members-list .member-avatar {
+        width: 60%;
+    }
+    .tour-section .places-list .place-mobile {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    #contact .contact-content .contact-info {
+        margin-bottom: 16px;
+    }
 }
