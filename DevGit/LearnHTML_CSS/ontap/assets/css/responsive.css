@@ -1,0 +1,33 @@
+/* Mobile */
+@media (max-width : 740px) {
+    #header {
+        overflow: hidden;
+    }
+    #header #nav li {
+        display: block;
+    }
+    #header #nav li:first-child {
+        display: inline-block;
+    }
+    #header ul {
+        width: 100%;
+        background-color: #000;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #header .menu-mobile {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        padding: 0 24px;
+    }
+    #header .menu-mobile:hover {
+        background-color: #ccc;
+    }
+    #header .menu-mobile:hover .ti-view-list {
+        color: #000;
+    }
+
+}
