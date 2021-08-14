@@ -220,7 +220,16 @@
     </script>
     <script>
         const openMenu = document.querySelector('.menu-mobile');
-        const 
+        const headerElement = document.querySelector('#header');
+        const heightMenu = headerElement.clientHeight;
+        openMenu.addEventListener('click',function(){
+            var isClosed = headerElement.clientHeight != heightMenu;
+            if(isClosed) {
+                headerElement.style.overflow = "hidden"
+            }else{
+                headerElement.style.overflow = "initial";
+            }
+        })
     </script>
 </body>
 </html>
