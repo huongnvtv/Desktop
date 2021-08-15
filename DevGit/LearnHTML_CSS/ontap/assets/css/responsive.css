@@ -1,16 +1,25 @@
 /* Mobile */
 @media (max-width : 740px) {
-    
-    #header #nav li {
+    .s-col-full {
+        width: 100% !important;
+    }
+    #header {
+        overflow: hidden;
+    }
+    #nav {
         display: block;
     }
-    #header #nav li:first-child {
+    #nav > li {
+        display: block;
+    }
+    #header #nav > li:first-child {
         display: inline-block;
     }
-    #header ul {
-        width: 100%;
-        background-color: #000;
+    #nav .subnav {
+        position: initial; /* giá trị mặc định */
+        background-color: #444;
     }
+    
     #header .search-btn {
         display: none;
     }

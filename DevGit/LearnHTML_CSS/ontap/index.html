@@ -60,15 +60,15 @@
                     laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="member-lists">
-                    <div class="member-item">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Name</p>
                         <img src="./assets/image/band/member1.jpg" class="member-avatar"></img>
                     </div>
-                    <div class="member-item">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Name</p>
                         <img src="./assets/image/band/member1.jpg" class="member-avatar"></img>
                     </div>
-                    <div class="member-item">
+                    <div class="member-item s-col-full mt-16">
                         <p class="member-name">Name</p>
                         <img src="./assets/image/band/member1.jpg" class="member-avatar"></img>
                     </div>
@@ -96,7 +96,7 @@
                         </li>
                     </ul>
                     <div class="places-list">
-                        <div class="place-item">
+                        <div class="place-item s-col-full ">
                             <img src="./assets/image/places/place1.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -105,7 +105,7 @@
                                 <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="place-item s-col-full">
                             <img src="./assets/image/places/place2.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -114,7 +114,7 @@
                                 <button class="place-buy-btn js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="place-item s-col-full">
                             <img src="./assets/image/places/place3.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -219,15 +219,16 @@
         })
     </script>
     <script>
+        // đóng mở menu
         const openMenu = document.querySelector('.menu-mobile');
         const headerElement = document.querySelector('#header');
         const heightMenu = headerElement.clientHeight;
         openMenu.addEventListener('click',function(){
-            var isClosed = headerElement.clientHeight != heightMenu;
+            var isClosed = headerElement.clientHeight === heightMenu;
             if(isClosed) {
-                headerElement.style.overflow = "hidden"
+                headerElement.style.height = "auto";
             }else{
-                headerElement.style.overflow = "initial";
+                headerElement.style.height = null;
             }
         })
     </script>
