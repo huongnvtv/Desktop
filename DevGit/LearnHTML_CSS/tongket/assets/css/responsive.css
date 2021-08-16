@@ -1,4 +1,13 @@
 @media (max-width : 46.1875em) {
+    .s-col-full {
+        width: 100% !important;
+    }
+    .mt-16 {
+        margin-top: 16px;
+    }
+    .mt-8 {
+        margin-top: 8px;
+    }
     #header {
         overflow: hidden;
     }
@@ -29,5 +38,19 @@
         background-color: #ccc;
         color: #000;
     }
-
+    .contact-section .contact-input .input-control {
+        padding: 12px;
+    }
+    .contact-section .contact-input .btn-contact {
+        padding: 16px 16px;
+        width: 100%;
+    }
+    #content .place-item .ticket-btn {
+        padding: 16px 16px;
+        width: 100%;
+    }
+    #footer .icon-soccial .icon-mobile {
+        font-size: 32px;
+        padding: 8px;
+    }
 }

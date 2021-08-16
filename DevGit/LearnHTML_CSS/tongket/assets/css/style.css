@@ -162,7 +162,8 @@ html {
     line-height: 1.4;
 }
 #content .members-list {
-    padding: 32px 0;
+    padding-top: 16px;
+    padding-bottom: 32px;
     text-align: center;
 }
 #content .members-list::after {
@@ -206,7 +207,8 @@ html {
     margin-right: 16px;
 }
 #content .places-list {
-    padding: 32px 0;
+    padding-top: 16px;
+    padding-bottom: 32px;
 }
 #content .places-list::after {
     content: "";
