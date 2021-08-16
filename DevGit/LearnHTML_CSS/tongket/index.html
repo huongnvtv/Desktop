@@ -8,6 +8,7 @@
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAcb8gCVvaickmBc8ONC6fmGEYnORuXRfCwA&usqp=CAU" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="header">
@@ -29,6 +30,9 @@
         </ul>
         <div class="search-btn">
             <i class="ti-search search-icon"></i>
+        </div>
+        <div class="sidebar-mobile">
+            <i class="mobile-menu ti-menu"></i>
         </div>
     </div>
     <div id="slider">
@@ -204,6 +208,19 @@
         })
         modalContainer.addEventListener('click',function(event){
             event.stopImmediatePropagation();
+        })
+    </script>
+    <script>
+        const btnSideBar = document.querySelector('.sidebar-mobile');
+        const headerElement = document.querySelector('#header');
+        const heightHeader = headerElement.clientHeight;
+        btnSideBar.addEventListener('click',function(){
+            var isOpen = heightHeader == headerElement.clientHeight;
+            if(isOpen){
+                headerElement.style.height = "auto";
+            }else {
+                headerElement.style.height = null;
+            }
         })
     </script>
 </body>

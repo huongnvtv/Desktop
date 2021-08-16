@@ -1,0 +1,33 @@
+@media (max-width : 46.1875em) {
+    #header {
+        overflow: hidden;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #nav {
+        height: auto;
+        display: block;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    #nav > li > a {
+        display: block;
+    }
+    #header .sidebar-mobile {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        color: #fff;
+    }
+    #header .sidebar-mobile:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+}

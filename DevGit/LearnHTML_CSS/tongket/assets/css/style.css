@@ -90,6 +90,9 @@ html {
     width: 6px;
     height: 6px;
 }
+#header .sidebar-mobile {
+    display: none;
+}
 #header .search-btn {
     float: right;
     color: #fff;
@@ -98,6 +101,7 @@ html {
     background-color: #f44336;
     cursor: pointer;
 }
+#header .sidebar-mobile .mobile-menu,
 #header .search-btn .search-icon {
     line-height: 46px;
     padding: 0 24px;
