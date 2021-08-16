@@ -133,6 +133,9 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .content-section .section-heading {
     text-align: center;
@@ -386,6 +389,7 @@ html {
 }
 #content .map-section {
     filter: grayscale(50%);
+    width: 100%;
 }
 #footer {
     padding: 64px 16px;
