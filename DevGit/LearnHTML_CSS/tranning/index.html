@@ -6,42 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       ul {
-        list-style: none; /* Remove HTML bullets */
-        padding: 0;
-        margin: 0;
+        .main {
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            
         }
-
-        li { 
-        padding-left: 16px; 
-        }
-
-        li::before {
-        content: "."; /* Insert content that looks like bullets */
-        padding-right: 8px;
-        color: blue; /* Or a color you prefer */
-        }
-
-        @media (max-width : 800px){
-            /* nhỏ hơn hoặc bằng 800px thì css trong này sẽ chạy min-width thì ngược lại >=800px */
-            .ipad {
-                color: brown;
-            }
-        }
-        /*
-           PC : width >= 1024px
-           Tablet(máy tính bảng) : >= 740px && < 1024px
-           Mobile : < 740px
-        */
+       .item {
+           padding: 20px 30px;
+           text-align: center;
+           height: var(--percent);
+       }
+       .item-1 {
+           background-color: coral;
+           order: 1;
+           flex-grow: 1;
+       }
+       .item-2 {
+           background-color: darkseagreen;
+           
+       }
+       .item-3 {
+           background-color: khaki;
+           flex: 1;
+       }
+       .item-4 {
+           background-color: lightseagreen;
+       }
+       .item-5 {
+           background-color: lime;
+       }
+       .item-6 {
+           background-color: orange;
+       }
     </style>
 </head>
 <body>
-    <h1>The content Property</h1>
-
-    <ul class="ipad">
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Coca Cola</li>
-    </ul>
+    <h1>Tranning flex</h1>
+    <div class="main">
+        <div class="item item-1" style="--percent: 10%">
+            item 1
+        </div>
+        <div class="item item-2" style="--percent: 20%">
+            item 2
+        </div>
+        <div class="item item-3" style="--percent: 25%">
+            item 3
+        </div>
+        <div class="item item-4" style="--percent: 30%">
+            item-4
+        </div>
+        <div class="item item-5" style="--percent: 50%">
+            item-5
+        </div>
+        <div class="item item-6" style="--percent: 70%">
+            item-6
+        </div>
+    </div>
 </body>
 </html>
