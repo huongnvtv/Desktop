@@ -69,14 +69,17 @@ body {
 
 .sidebar-one {
     flex: 1; /* dùng để xét kích thước các flex-item */
+    order: 1; /* dùng để xét vị trị của item trong flex ông nào nhỏ hơn thì đứng gần main start hơn */
 }
 
 .sidebar-two {
     flex: 1; /* dùng để xét kích thước các flex-item */
+    order: 2;
 }
 
 .main-column {
     flex: 3; /* dùng để xét kích thước các flex-item */
+    order: 3;
 }
 
 /* Feature layout */
@@ -218,3 +221,12 @@ body {
     padding: 4px 16px;
     background-color: rgb(192, 210, 227);
 }
+/*
+   flex : 1 viết short hend của
+   flex-grow : 1
+   flex-shrink : 1
+   flex-basic : 1
+   _________________________
+
+   flex-flow 
+*/
