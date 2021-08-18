@@ -7,16 +7,17 @@
     <title>Document</title>
     <style>
         .main {
-            height: 200px;
+            height: 1000px;
             display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            
+            flex-direction: column;
+            justify-content: space-between;
         }
        .item {
+           width: 50px;
            padding: 20px 30px;
            text-align: center;
-           height: var(--percent);
+           height: 50px;
+           /* height: var(--percent); */
        }
        .item-1 {
            background-color: coral;
@@ -24,8 +25,6 @@
        }
        .item-2 {
            background-color: darkseagreen;
-           flex-basis: 20%;
-           align-self: baseline;
        }
        .item-3 {
            background-color: khaki;
