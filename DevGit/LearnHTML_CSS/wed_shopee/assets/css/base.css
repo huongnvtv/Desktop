@@ -1,0 +1,32 @@
+:root {
+    --white-color : #fff;
+    --black-color : #000;
+    --text-color : #333;
+}
+
+* {
+    box-sizing: inherit; /* dùng để kế thừa lại những thẻ chứa khối đó có thuộc tính là box-sizing */
+}
+
+html {
+   /* font-size: 100%; */ /* 100% - đặt mặc định : 16px */
+   font-size: 62.5%; /* tương đương 10px */
+   line-height: 1.6rem; /* tương đương 16px*/
+   font-family: 'Roboto', sans-serif;
+   box-sizing: border-box;
+}
+.grid {
+   width: 1200px;
+   max-width: 100%;
+   /* với màn hình lớn hơn 1200px thì width = 1200px còn màn hình nhỏ hơn thì
+      width bằng 100% kích thước màn hình
+   */
+   margin: 0 auto;
+}
+.grid__full-width {
+    width: 100%;
+}
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
