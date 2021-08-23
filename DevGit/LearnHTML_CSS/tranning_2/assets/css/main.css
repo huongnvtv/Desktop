@@ -51,5 +51,36 @@
 }
 .header__navbar-title-no-pointer {
     cursor: text;
-    color: #fff;
+    color: var(--white-color);
+}
+.header__qr {
+    position: absolute;
+    padding: 4px;
+    background-color:var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    top: calc(100% + 10px);
+    display: none;
+}
+.header__qr::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    height: 10px;
+    width: 100%;
+}
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.header__qr-img {
+    width: 180px;
+    height: 180px;
+}
+.header__qr-link {
+    text-decoration: none;
+}
+.header__qr-dowload-img {
+    width: 70px;
+    margin-left: 10px;
 }
