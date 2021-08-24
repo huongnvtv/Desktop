@@ -118,6 +118,25 @@
     animation: headerNotifyGrowth ease-in 0.3s;
     display: none;
 }
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 8px;
+    top: -30px;
+}
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+}
 .header__navbar-item--has-notify:hover .header__notify {
     display: block;
 }
