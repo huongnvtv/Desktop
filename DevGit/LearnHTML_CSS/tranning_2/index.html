@@ -53,7 +53,7 @@
                         </li>
                     </ul>
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
                             <a href="#" class="header__navbar-item-link">
                                 <i class="header__navbar-icon far fa-bell"></i>Thông báo
                             </a>
@@ -124,6 +124,43 @@
         </div>
         <div class="footer">
 
+        </div>
+    </div>
+    <!--Modal layout-->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <!--Authen form -->
+                <div class="auth-form">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng kí</h3>
+                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="email" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                            <a href="#" class="auth-form__policy-link">Điều khoản dịch vụ </a>&
+                            <a href="#" class="auth-form__policy-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÍ</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
