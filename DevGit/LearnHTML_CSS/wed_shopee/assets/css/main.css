@@ -78,6 +78,7 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in 0.3s;
+    will-change: opacity,transform; /* trình duyệt sẽ tối ưu cho opacity,trasform cho animation */
 }
 .header_qr::before {
     content: "";
