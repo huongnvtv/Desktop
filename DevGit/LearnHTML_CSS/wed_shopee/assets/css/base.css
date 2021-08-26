@@ -2,6 +2,8 @@
     --white-color : #fff;
     --black-color : #000;
     --text-color : #333;
+    --primary-color :#ee4d2d;
+    --border-color : #dbdbdb;
 }
 
 * {
@@ -58,4 +60,18 @@ html {
     position: relative;
     z-index: 1;
     border-radius: 5px;
+}
+/* Button btn */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0;
+}
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
