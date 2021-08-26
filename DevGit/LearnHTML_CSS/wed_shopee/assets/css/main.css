@@ -215,6 +215,9 @@
 /* Authen modal*/
 .auth-form {
     width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
 }
 .auth-form__container {
     padding: 0 32px;
@@ -262,4 +265,30 @@
 }
 .auth-form__controls {
     margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+.auth-form__socials {
+    background-color: #eee;
+    padding: 16px 36px;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.auth-form__socials--facebook {
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+.auth-form__socials-title {
+    padding: 0 36px;
+}
+.auth-form__socials--google {
+    background-color: rgba(0,0,0,0.1);
+
 }
