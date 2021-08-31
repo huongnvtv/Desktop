@@ -2,7 +2,7 @@
     --white-color : #fff;
     --black-color : #000;
     --text-color : #333;
-    --primary-color :#ee4d2d;
+    --primary-color :#fb5533;
     --border-color : #dbdbdb;
     --navbar-height : 34px;
     --header-height : 120px;
@@ -58,6 +58,7 @@ html {
     left: 0;
     display: flex;
     animation: fadeIn linear 0.1s;
+    z-index: 2;
 }
 .modal__overlay {
     position: absolute;
