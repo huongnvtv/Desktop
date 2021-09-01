@@ -415,6 +415,51 @@
 .header__search-input:focus ~ .header__search-history-list {
     display: block;
 }
+/* header cart list */
+.header__cart-wrap {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+}
+.header__cart-list {
+    width: 400px;
+    position: absolute;
+    background-color: var(--white-color);
+    top: 100%;
+    right: -4px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0,0,0,0.2);
+    animation: headerNotifyGrowth ease-in 0.2s;
+    transform-origin: top right;
+    display: none;
+    cursor: default;
+}
+.header__cart-list::before {
+    content: "";
+    border-style: solid;
+    position: absolute;
+    top: -15px;
+    right: 12px;
+    border-width: 8px 12px;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+.header__cart-no-cart-img {
+    width: 100px;
+    height: 100px;
+}
+.header__cart-list-wrap {
+    padding: 60px 0;
+    text-align: center;
+}
+.header__cart-list-no-cart-msg {
+    margin-top: 20px;
+    display: block;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
 /* Search history */
 .header__search-history-list {
     background-color: var(--white-color);
