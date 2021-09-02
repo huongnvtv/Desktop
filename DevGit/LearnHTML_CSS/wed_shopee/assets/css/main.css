@@ -367,7 +367,7 @@
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem rgba(0,0,0,0.2);
-    display: none;
+    /* display: none; */
     animation: fadeIn ease-in 0.2s;
 }
 .header__cart-icon:hover ~ .header__cart-list {
@@ -377,17 +377,37 @@
     padding: 60px 0;   
 }
 .header__cart-list-no-cart-msg {
-    display: block;
+    display: none;
     margin-top: 20px;
     font-size: 1.6rem;
     color: var(--text-color);
     text-align: center;
 }
+.header__cart-notice {
+    position: absolute;
+    top: 4px;
+    right: 48px;
+    padding: 2px 6px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 10px;
+    border: 2px solid #EE4D2D;
+}
 .header__cart-no-cart-img {
     width: 100px;
     height: 100px;
+    display: none;
 }
-
+.header__cart-list--no-cart .header__cart-no-cart-img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.header__cart-list--no-cart .header__cart-list-no-cart-msg {
+    display: block;
+}
 .header__search-input-wrap {
     flex: 1;
     height: 100%;
