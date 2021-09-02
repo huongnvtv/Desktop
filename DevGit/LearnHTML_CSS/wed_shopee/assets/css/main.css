@@ -552,3 +552,32 @@
     color: var(--text-color);
     display: block;
 }
+/* Cart item */
+.header__cart-heading {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.6rem;
+    margin: 11px 0;
+    color: var(--text-color);
+    font-weight: 400;
+    opacity: 0.6;
+}
+.header__cart-list-item {
+    padding-left: 0;
+    list-style: none;
+}
+.header__cart-item {
+    display: flex;
+    padding: 10px;
+}
+.header__cart-img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.09);
+}
+.header__cart-item-info {
+    margin-left: 10px;
+}
+.header__cart-item-head {
+    display: flex;
+}
