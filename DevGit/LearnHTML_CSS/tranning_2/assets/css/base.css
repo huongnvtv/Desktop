@@ -76,7 +76,7 @@ html {
 }
 /* Button btn */
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     border: none;
     text-decoration: none;
@@ -90,6 +90,7 @@ html {
     align-items: center;
     line-height: 1.6rem;
 }
+
 .btn.btn--size-s {
     height: 32px;
     font-size: 12px;
