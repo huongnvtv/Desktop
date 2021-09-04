@@ -14,6 +14,65 @@
     position: relative;
     min-height: 26px;
 }
+.header__navbar-user {
+    display: flex;
+    position: relative;
+}
+.header__navbar-user-img {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 1px solid rgba(0,0,0,0.09);
+   position: relative;
+   top: 5px;
+}
+.header__navbar-user-name {
+    padding-left: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.header__navbar-user-menu {
+    position: absolute;
+    padding: 4px 16px;
+    top: 30px;
+    right: 0;
+    background-color: var(--white-color);
+    list-style: none;
+    z-index: 1;
+    border-radius: 2px;
+    width: 140px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.09);
+    display: none;
+}
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+.header__navbar-user-menu::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 30px;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -28px;
+    right: 10px;
+}
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+}
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.header__navbar-user-item a:hover {
+    color: #25ccb6;
+}
 .header__navbar-item:hover,
 .header__navbar-item-link:hover,
 .header__navbar-icon-link:hover {
@@ -367,7 +426,7 @@
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem rgba(0,0,0,0.2);
-    /* display: none; */
+    display: none;
     animation: fadeIn ease-in 0.2s;
 }
 .header__cart-icon:hover ~ .header__cart-list {
