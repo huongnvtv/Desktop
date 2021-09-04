@@ -112,6 +112,7 @@
     display: none;
     animation: headerNotifyGrowth ease-in 0.3s;
     transform-origin: 85% top;
+    border-radius: 2px;
     z-index: 2;
 }
 .header__navbar-item--has-notify:hover .header__notify {
@@ -626,4 +627,11 @@
 }
 .header__navbar-user-item a:hover {
     color: #16c3b5;
+}
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+.header__logo-link {
+    color: transparent;
+    text-decoration: none;
 }
