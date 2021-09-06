@@ -2,6 +2,7 @@
     --white-color : #fff;
     --black-color : #000;
     --text-color : #333;
+    --shoppe-color : #000000CC;
     --primary-color :#fb5533;
     --border-color : #dbdbdb;
     --navbar-height : 34px;
@@ -34,6 +35,19 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* */
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: calc(100% / 6);
+}
+.grid__column-10 {
+    padding-right: 12px;
+    padding-left: 12px;
+    width: calc(500% / 6);
 }
 /* Animation */
 @keyframes fadeIn {
