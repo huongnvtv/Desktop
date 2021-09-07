@@ -753,3 +753,69 @@
     right: -4px;
 }
 /* Home sort + filter */
+.home-filter {
+    background-color: rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+}
+.home-filter__lable {
+    margin-right: 16px;
+    font-size: 1.4rem;
+    color: #555;
+}
+.home-filter__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.home-filter__btn {
+    margin-right: 12px;
+    min-width: 90px;
+}
+.home-filter__page-num {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+.home-filter__page-current {
+    color: var(--primary-color);
+}
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+    background-color: var(--white-color);
+}
+.home-filter__page-btn {
+    flex: 1;
+    padding-left: 14px;
+    height: 100%;
+    padding-top: 11px;
+}
+.home-filter__page-btn:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+.home-filter__page-btn--disabled {
+    background-color: #F9F9F9;
+    cursor: default;
+}
+.home-filter__page-btn--disabled .home-filter__page-icon {
+    color: #ccc;
+} 
+.home-filter__page-icon {
+    font-size: 1.4rem;
+    color: #555;
+}
+.select-input__label {
+    font-size: 1.4rem;
+}
+.select-input i {
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
