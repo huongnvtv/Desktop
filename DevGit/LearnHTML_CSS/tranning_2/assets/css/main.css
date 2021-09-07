@@ -670,7 +670,10 @@
 }
 .category {
     list-style: none;
-    padding-left: 2px;
+    padding: 10px 0 20px 2px;
+    margin: 0;
+    width: 190px;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
 }
 .category-item {
     padding: 8px 0;
@@ -689,10 +692,22 @@
     margin-right: 1rem;
     box-shadow: inset 1px rgb(0,0,0,5%);
     position: relative;
-    top: -1px;
+    top: 0px;
 }
 .category-item-label {
     font-size: 1.4rem;
     color: var(--shoppe-color);
     cursor: pointer;
+}
+.category-item-toggle {
+    padding: 8px 10px 8px 22px;
+    font-size: 1.4rem;
+    color: var(--shoppe-color);
+}
+.category-item-icon-arrow-down {
+    font-size: 0.8rem;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
 }
