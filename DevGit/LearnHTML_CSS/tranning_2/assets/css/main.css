@@ -713,7 +713,7 @@
 }
 
 .about-price {
-    padding: 20px 0;
+    padding: 10px 0 20px 0;
 }
 .about-price__name {
     font-size: 1.4rem;
@@ -722,7 +722,7 @@
     margin: 0 0 10px 0;
 }
 .about-price__filter {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 0 0;
     display: flex;
     align-items: center;
 }
@@ -742,8 +742,40 @@
     flex: 1;
     height: 1px;
     background-color: #bdbdbd;
-    margin: 1rem;
+    margin: 1rem 1.6rem;
 }
 .about-price__filter-btn {
     height: 30px;
+}
+/* Rating start */
+
+.rating-starts__icon {
+   margin: 0 0.4rem 0 0;
+   color: #ffce3d;
+   stroke: currentColor;
+   display: inline-block;
+   width: 1.4rem;
+   height: 1.4rem;
+   fill: currentColor;
+}
+.rating-starts {
+    padding: 0 12px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.rating-starts__icon-no-filter {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: currentColor;
+    stroke: currentColor;
+    color: #ffce3d;
+    margin: 0 0.4rem 0 0;
+}
+.rating-starts__label {
+    font-size: 1.4rem;
+    color: var(--shoppe-color);
+}
+.btn-delete-all {
+    padding-top: 20px;
 }
