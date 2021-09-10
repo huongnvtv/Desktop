@@ -816,9 +816,13 @@
     height: 120px;
     background-color: var(--white-color);
     padding: 0 25px;
+    display: flex;
+    align-items: center;
 }
 .section-content-avatar {
     position: relative;
+    width: 70px;
+    height: 72px;
 }
 .section-content-avatar-img {
     background-image: url(https://cf.shopee.vn/file/899f60465b5b2caf4cf482e4064d2775_tn);
@@ -840,4 +844,32 @@
     position: absolute;
     top: 52px;
     left: 1px;
+}
+/* shop info */
+.section-content__shop-info {
+    padding: 0 20px 0 10px;
+    height: 67px;
+}
+.section-content__shop-info__nickname {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
+    letter-spacing: 0.4px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+.section-content__shop-info__username {
+    font-size: 1.4rem;
+    color: #000000CC;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.section-content__shop-info__follow-count {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #0000008A;
+}
+.section-content__shop-info__follow-count-number {
+    color: #EE4D2D;
 }
