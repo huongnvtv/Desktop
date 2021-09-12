@@ -824,8 +824,17 @@
     background-color: var(--white-color);
     margin-top: 10px;
     position: relative;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,0.1);
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+    cursor: pointer;
 }
-
+.home-product-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.1rem 2rem 0 rgba(0,0,0,0.05);
+}
 .home-product-item__img {
     padding-top: 100%;
     background-repeat: no-repeat;
