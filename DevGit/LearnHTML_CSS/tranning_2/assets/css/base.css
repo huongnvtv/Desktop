@@ -104,7 +104,22 @@ html {
     align-items: center;
     line-height: 1.6rem;
 }
-
+.btn--size-m {
+    width: 124px;
+    height: 34px;
+    border: none;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    background-color: var(--white-color);
+}
 .btn.btn--size-s {
     height: 32px;
     font-size: 12px;
