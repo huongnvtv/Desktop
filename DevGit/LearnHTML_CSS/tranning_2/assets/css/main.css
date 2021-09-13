@@ -1032,3 +1032,43 @@
 .sort-bar__select-with-price-item a:hover {
     color: #EE4D2D;
 }
+/* controller mini page */
+.mini-page-controller {
+    display: flex;
+    line-height: 34px;
+    margin-left: auto;
+}
+.mini-page-controller__state {
+    font-size: 1.4rem;
+    color: #000000CC;
+}
+.mini-page-controller__current {
+    color: #EE4D2D;
+}
+.min-page-controller__outline-icon {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 1px;
+}
+.min-page-controller__outline {
+    height: 32px;
+    width: 23px;
+    padding: 1px 6px;
+    background-color: var(--white-color);
+    box-sizing: content-box;
+    text-align: center;
+    opacity: 0.7;
+    text-decoration: none;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05);
+}
+.min-page-controller-arrow-left {
+    margin-left: 20px;
+    border-right: 1px solid #f2f2f2;
+}
+.min-page-controller__outline--disabled {
+    background-color: #f9f9f9;
+}
+.min-page-controller__outline--disabled .min-page-controller__outline-icon {
+    opacity: 0.4;
+}
