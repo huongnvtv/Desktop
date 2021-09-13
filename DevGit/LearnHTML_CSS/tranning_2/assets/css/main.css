@@ -558,8 +558,14 @@
 }
 .header__cart-info-name {
     margin: 0;
-    display: inline-block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
     font-size: 1.4rem;
+    line-height: 2rem;
+    height: 2rem;
+    padding-right: 40px;
     color: var(--text-color);
     font-weight: 400;
 }
@@ -592,7 +598,7 @@
 }
 .header__navbar-user-menu {
     position: absolute;
-    top: 28px;
+    top: 30px;
     right: 0;
     list-style: none;
     background-color: var(--white-color);
