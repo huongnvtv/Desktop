@@ -765,6 +765,15 @@
    height: 1.4rem;
    fill: currentColor;
 }
+.rating-starts__icon--size-s {
+    margin: 0 0.1rem 0 0;
+    color: #ffce3d;
+    stroke: currentColor;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
 .rating-starts {
     padding: 0 12px;
     line-height: 25px;
@@ -1071,4 +1080,13 @@
 }
 .min-page-controller__outline--disabled .min-page-controller__outline-icon {
     opacity: 0.4;
+}
+/* product item */
+.product-item-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.product-item-list {
+    margin-top: 8px;
 }
