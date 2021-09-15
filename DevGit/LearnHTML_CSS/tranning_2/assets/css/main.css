@@ -1086,6 +1086,7 @@
     border: 1px solid rgba(0,0,0,0.05);
     height: 330px;
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.05);
+    position: relative;
 }
 .product-item-img {
     background-size: contain;
@@ -1093,7 +1094,7 @@
     width: 100%;
 }
 .product-item-list {
-    margin-top: 8px;
+    margin-top: 10px;
 }
 .product-item-content {
     padding: 10px;
@@ -1151,4 +1152,52 @@
     font-size: 1.2rem;
     color: #000000A6;
     float: right;
+}
+.product-item__rating-liked {
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    background-color: currentColor;
+    color: #EE4D2D;
+    padding: 2px 5px 1px 5px;
+    box-sizing: content-box;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.product-item__rating-liked::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 1px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+}
+.product-item__rating-liked span {
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+.product-item__percent-sell {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255,212,36,.9);
+    font-size: 1.2rem;
+    padding: 4px 2px 3px 2px;
+    color: var(--white-color)
+}
+.product-item__percent-number {
+    display: block;
+    color: #EE4D2D;
+    text-align: center;
+    margin-bottom: 1px;
+}
+.product-item__percent-sell::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    border-width: 0 17px 7px 17px;
+    border-style: solid;
+    border-color: transparent rgba(255,212,36,.9) transparent rgba(255,212,36,.9);
 }
