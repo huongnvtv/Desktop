@@ -1238,3 +1238,7 @@
     border-style: solid;
     border-color: transparent rgba(255,212,36,.9) transparent rgba(255,212,36,.9);
 }
+.header__cart-item-current--disabled {
+    color: rgba(0,0,0,0.54);
+    text-decoration: line-through;
+}
