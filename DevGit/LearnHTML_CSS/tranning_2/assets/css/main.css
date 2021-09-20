@@ -1327,6 +1327,7 @@
     list-style: none;
     width: 190px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 .footer__epay-item {
@@ -1369,4 +1370,91 @@
     color: #0000008A;
     text-transform: uppercase;
     font-weight: 500;
+}
+.footer-vn-shopee-express-png {
+    background-size: 667.5675675675676% 983.3333333333334%;
+    background-position: 65.71428571428571% 35.22012578616352%;
+}
+.footer-vn-ghtk-png {
+    background-size: 1347.2727272727273% 983.3333333333334%;
+    background-position: 19.97084548104956% 37.735849056603776%;
+}
+.footer-vn-ghn-png {
+    background-size: 1347.2727272727273% 610.3448275862069%;
+    background-position: 9.037900874635568% 40.54054054054054%;
+}
+.footer-vn-viettel_post-png {
+    background-size: 578.90625% 138.28125%;
+    background-position: 88.90701468189233% 100%;
+}
+.footer-vn-vnpost-png {
+    background-size: 1347.2727272727273% 655.5555555555555%;
+    background-position: 1.4577259475218658% 72.66666666666667%;
+}
+.footer-vn-vn_jnt_footer-png {
+    background-size: 1347.2727272727273% 1106.25%;
+    background-position: 95.6268221574344% 6.211180124223603%;
+}
+.footer-vn-grab_express-png {
+    background-size: 552.9850746268656% 610.3448275862069%;
+    background-position: 29.9835255354201% 6.756756756756757%;
+}
+.footer-vn-ninja-van-png {
+    background-size: 1235% 680.7692307692307%;
+    background-position: 55.947136563876654% 6.622516556291391%;
+}
+.footer-vn-best-express-png {
+    background-size: 1029.1666666666667% 590%;
+    background-position: 13.452914798206278% 6.802721088435374%;
+}
+.footer__epay-soccial {
+    padding: 2px 0 0 0;
+    margin: 0;
+    list-style: none;
+}
+.footer__epay-socciabled {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.footer__epay-socciabled-icon {
+    margin: 0 10px 4px 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+.footer-vn-f-png {
+    background-size: 2315.625% 553.125%;
+    background-position: 1.4104372355430184% 35.86206896551724%;
+}
+.footer__epay-socciabled-title {
+    font-size: 1.2rem;
+    color: #0000008A;
+    font-weight: 500;
+}
+.footer-vn-ins-png  {
+    background-size: 2315.625% 553.125%;
+    background-position: 29.90126939351199% 40.689655172413794%;
+}
+.footer-vn-lin-png {
+    background-size: 2315.625% 553.125%;
+    background-position: 46.403385049365305% 6.896551724137931%;
+}
+.footer__dowload-apps {
+    display: flex;
+}
+.footer__dowload-apps__qr-code {
+    width: 86px;
+    height: 86px;
+    border: 1px solid rgba(0,0,0,0.09);
+    margin-right: 15px;
+}
+.footer__dowload-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer__dowload-app__item {
+    width: 80px;
 }
