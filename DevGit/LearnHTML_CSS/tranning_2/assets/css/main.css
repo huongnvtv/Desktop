@@ -1491,3 +1491,57 @@
     text-decoration: none;
     color: #0000008A;
 }
+.footer__policy {
+    padding: 42px 0 37px 0;
+    background-color: #f5f5f5;
+}
+.footer__policy-label {
+    padding-left: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+}
+.footer__policy-label__item a {
+    font-size: 1.2rem;
+    color: #0000008A;
+    text-decoration: none;
+    padding: 0 25px;
+}
+.footer-vn-vn_registered_red-png {
+    background-size: 617.5% 393.3333333333333%;
+    background-position: 34.13848631239936% 84.0909090909091%;
+}
+.footer-vn-vn_no_fake_item-png  {
+    background-size: 1543.75% 368.75%;
+    background-position: 100% 35.65891472868217%;
+}
+.footer__policy-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer__policy-banner a {
+    margin: 0 20px;
+}
+.footer__policy-banner__item--register {
+    width: 12rem;
+    height: 4.5rem;
+}
+.footer__policy-banner__item--no-fake {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+.footer__policy-company {
+    margin: 8px 0 25px 0;
+    font-size: 1.2rem;
+    color: #000000A6;
+    text-align: center
+}
+.footer__policy-address-text {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #000000A6;
+    text-align: center;
+}
