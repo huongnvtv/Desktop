@@ -1007,6 +1007,7 @@
 }
 .sort-bar__select-with-status:hover .sort-bar__select-with-price-list {
     display: block;
+    z-index: 1;
 }
 .sort-bar__select-with-price-list {
     position: absolute;
@@ -1143,8 +1144,12 @@
     padding: 2px 4px;
     color: #EE4D2D;
     border: 1px solid #EE4D2D;
-    display: inline-block;
+    display: -webkit-inline-box;
     border-radius: 2px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
 }
 .product-item-content__sell-off--disabled {
     margin-top: 5px;
