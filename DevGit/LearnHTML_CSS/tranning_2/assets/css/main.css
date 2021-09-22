@@ -1458,3 +1458,36 @@
 .footer__dowload-app__item {
     width: 80px;
 }
+.footer__license {
+    margin-top: 40px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    display: flex;
+    font-size: 1.4rem;
+    color: #0000008A;
+    justify-content: space-between;
+}
+.footer__license-author {
+    margin-right: 25px;
+}
+.footer__license-nation {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer__license-nation__item {
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding: 0 5px;
+}
+.footer__license-nation__item:nth-child(1) {
+    border-left: none;
+}
+.footer__license-nation__item:nth-child(2) {
+    border-left: none;
+}
+.footer__license-nation__item a {
+    text-decoration: none;
+    color: #0000008A;
+}
