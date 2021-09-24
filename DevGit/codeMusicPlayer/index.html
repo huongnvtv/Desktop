@@ -95,6 +95,7 @@
         const $$ = document.querySelectorAll.bind(document);
 
         const app = {
+            currentIndex: 0,
             songs: [
         {
         name: "Click Pow Get Down",
@@ -165,10 +166,23 @@
                 )
                 $('.playlist').innerHTML = htmls.join('')
             },
+            defineProperties: function(){
+              Object.defineProperty
+            },
             handleEvents: function(){
+              // xu li su kien trong dom
+              const cd = $('.cd');
+              const cdWidth = cd.offsetWidth;
 
+              document.onscroll = function(){
+                const scrollTop =  window.scrollY || document.documentElement.scrollTop;
+                const newCdWidth = cdWidth - scrollTop;
+                cd.style.width =newCdWidth > 0 ? newCdWidth + 'px' : 0; // fix loi keo nhanh qua se ko an img
+                cd.style.opacity = newCdWidth / cdWidth;
+              }
             },
             start: function(){
+                this.handleEvents();
                 this.render();
             }
         }
