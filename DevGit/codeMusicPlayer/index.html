@@ -89,19 +89,6 @@
             <i class="fas fa-ellipsis-h"></i>
           </div>
         </div>
-        <div class="song">
-          <div
-            class="thumb"
-            style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')"
-          ></div>
-          <div class="body">
-            <h3 class="title">Music name</h3>
-            <p class="author">Singer</p>
-          </div>
-          <div class="option">
-            <i class="fas fa-ellipsis-h"></i>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -109,14 +96,23 @@
     <script>
       const $ = document.querySelector.bind(document);
       const $$ = document.querySelectorAll.bind(document);
-
+      const heading = $('header h4');
+      const singer = $('header h2');
+      const cdThumb = $('.cd-thumb');
+      const cd = $('.cd');
+      const audio = $('audio');
+      const playBtn = $('.control .btn-toggle-play');
+      const player = $('.player');
+      const playBtnDemo = document.querySelector('.btn-toggle-play');
+      const audioPlay = document.querySelector('.audio');
+      console.log(playBtnDemo);
       const app = {
         currentIndex: 0,
         songs: [
           {
             name: 'Click Pow Get Down',
             singer: 'Raftaar x Fortnite',
-            path: 'https://mp3.vlcmusic.com/download.php?track_id=34737&format=320',
+            path: './assets/music/song1.mp3',
             image: 'https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg',
           },
           {
@@ -148,7 +144,8 @@
             name: 'Damn',
             singer: 'Raftaar x kr$na',
             path: 'https://mp3.filmisongs.com/go.php?id=Damn%20Song%20Raftaar%20Ft%20KrSNa.mp3',
-            image: 'https://filmisongs.xyz/wp-content/uploads/2020/07/Damn-Song-Raftaar-KrNa.jpg',
+            image:
+              'https://cdn.britannica.com/03/151903-131-E310E9EC/Microphone-background-sound-waves-energy-Music.jpg',
           },
           {
             name: 'Feeling You',
@@ -177,22 +174,42 @@
           $('.playlist').innerHTML = htmls.join('');
         },
         defineProperties: function () {
-          Object.defineProperty;
+          Object.defineProperty(this, 'currentSong', {
+            get: function () {
+              return this.songs[this.currentIndex];
+            },
+          });
         },
         handleEvents: function () {
           // xu li su kien trong dom
-          const cd = $('.cd');
           const cdWidth = cd.offsetWidth;
-
+          // xử lí phóng to thu nhỏ CD
           document.onscroll = function () {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const newCdWidth = cdWidth - scrollTop;
             cd.style.width = newCdWidth > 0 ? newCdWidth + 'px' : 0; // fix loi keo nhanh qua se ko an img
             cd.style.opacity = newCdWidth / cdWidth;
           };
+          // xử lí khi click play
+          playBtnDemo.onclick = function () {
+            audioPlay.play();
+            player.classList.add('playing');
+          };
+        },
+        loadCurrentSong: function () {
+          heading.textContent = this.currentSong.name;
+          singer.textContent = this.currentSong.singer;
+          cdThumb.style.backgroundImage = `url(${this.currentSong.image})`;
+          audio.style.src = this.currentSong.path;
         },
         start: function () {
+          // Định nghĩa các thuộc tính cho object
+          this.defineProperties();
+          // Lắng nghe và xử lí các sự kiện
           this.handleEvents();
+          // Tải thông tin bài hát đầu tiên vào ui
+          this.loadCurrentSong();
+          // Render danh sách các bài hát
           this.render();
         },
       };
