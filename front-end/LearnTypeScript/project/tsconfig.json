@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "es2020",
-    "outDir": "./src/js",
-    "module": "commonjs",
-    "strictNullChecks": true
-  },
-  "include": ["src/**/*"]
-}
