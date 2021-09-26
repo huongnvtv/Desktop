@@ -58,7 +58,7 @@
 
         <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100" />
 
-        <audio id="audio" src=""></audio>
+        <audio id="audioMs" src=""></audio>
       </div>
 
       <!-- Playlist -->
@@ -100,9 +100,10 @@
       const singer = $('header h2');
       const cdThumb = $('.cd-thumb');
       const cd = $('.cd');
-      const audio = $('#audio');
+      const audioMs = $('#audioMs');
       const playBtn = $('.btn-toggle-play');
       const player = $('.player');
+
       const app = {
         currentIndex: 0,
         isPlaying: false,
@@ -178,6 +179,12 @@
             },
           });
         },
+        loadCurrentSong: function () {
+          heading.textContent = this.currentSong.name;
+          singer.textContent = this.currentSong.singer;
+          cdThumb.style.backgroundImage = `url(${this.currentSong.image})`;
+          audioMs.src = this.currentSong.path;
+        },
         handleEvents: function () {
           // xu li su kien trong dom
           const _this = this;
@@ -191,32 +198,37 @@
           };
           // xử lí khi click play
           playBtn.onclick = function () {
-            if (_this.isPlaying) {
-              audio.play();
-            } else {
-              audio.pause();
-            }
-            // khi bài hát được play
-            audio.onplay = function () {
-              _this.isPlaying = true;
-              player.classList.add('playing');
-            };
-            // khi bài hát bị pause
-            audio.onpause = function () {
-              _this.isPlaying = false;
-              player.classList.remove('playing');
-            };
-            var audioPromise = audio.play();
+            // // khi bài hát được play
+            // audioMs.onplay = function () {
+            //   _this.isPlaying = true;
+            //   player.classList.add('playing');
+            // };
+            // // khi bài hát bị pause
+            // audioMs.onpause = function () {
+            //   _this.isPlaying = false;
+            //   player.classList.remove('playing');
+            // };
+            var audioPromise = audioMs.play();
             if (audioPromise !== undefined) {
-              audioPromise.then(function () {}).catch(function (err) {});
+              audioPromise
+                .then(function () {
+                  if (_this.isPlaying) {
+                    audioMs.pause();
+                    _this.isPlaying = false;
+                    player.classList.remove('playing');
+                  } else {
+                    audioMs.play();
+                    _this.isPlaying = true;
+                    player.classList.add('playing');
+                  }
+                })
+                .catch(function (err) {});
             }
+            // khi tiến độ bài hát thay đổi
+            audioMs.ontimeupdate = function () {
+              console.log(audioMs.currentTime);
+            };
           };
-        },
-        loadCurrentSong: function () {
-          heading.textContent = this.currentSong.name;
-          singer.textContent = this.currentSong.singer;
-          cdThumb.style.backgroundImage = `url(${this.currentSong.image})`;
-          audio.style.src = `${this.currentSong.path}`;
         },
         start: function () {
           // Định nghĩa các thuộc tính cho object
