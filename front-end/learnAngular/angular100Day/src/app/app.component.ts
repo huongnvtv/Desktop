@@ -16,4 +16,18 @@ export class AppComponent {
   demo() {
     console.log('event', event);
   }
+
+  user = {
+    name: 'huong',
+    age: 22,
+  };
+
+  ngOnInit() {
+    // khi khoi tao 1 component
+    console.log('hello init');
+  }
+  ngOnDestroy() {
+    // khi xoa 1 component
+    console.log('hello destroy');
+  }
 }
