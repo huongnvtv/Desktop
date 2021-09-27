@@ -6,22 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular100Day';
-  // các cách đẩy dữ liệu ra file app.component.html
-  // cách 1 dùng {{}} (property biding)
-  // cách 2 sử dụng data binding (property biding)
-  inputType = 'text';
-  name = 'huong';
-  // cách 3 sử dụng event binding
-  demo() {
-    console.log('event', event);
-  }
-
   user = {
-    name: 'huong',
-    age: 22,
+    name: 'hướng',
+    age: 21,
   };
-
+  bgInfo = 'bg-active bg-color';
+  bgNormal = 'bg-normal';
   ngOnInit() {
     // khi khoi tao 1 component
     console.log('hello init');

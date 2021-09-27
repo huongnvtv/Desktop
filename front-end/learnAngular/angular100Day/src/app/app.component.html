@@ -1,18 +1,4 @@
-<app-hello></app-hello>
-<app-hi></app-hi>
-<input type="text" value="demo" />
-<!--Data binding -->
-<input [type]="inputType" [value]="name" />
-
-<button type="button" (mouseover)="demo()">click me</button>
-
-<!-- <div *ngIf="user.age <= 23">hello tôi là {{ user.name }}</div>
-<div *ngIf="user.age > 25">tôi lớn hơn 25 tuổi</div> -->
-
-<div *ngIf="user.age <= 23; else under23">hello tôi là {{ user.name }}</div>
-<ng-template #under23>
-  <div>tôi lớn hơn 25 tuổi</div>
-</ng-template>
-<button (click)="user.age = user.age - 1">-</button>
-Age : {{ user.age }}
-<button (click)="user.age = user.age + 1">+</button>
+<div class="box-demo bg-normal" [class.bg-active]="user.age > 18">
+  {{ user.name }}
+</div>
+<p [style]="{ color: 'red', backgroundColor: 'orange' }">style binding</p>
