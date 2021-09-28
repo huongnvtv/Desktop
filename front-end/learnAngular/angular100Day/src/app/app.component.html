@@ -4,3 +4,15 @@
 <p [style]="{ color: 'red', backgroundColor: 'orange' }">style binding</p>
 <p [style]="styleOfMe">hello anh em</p>
 <progress-bar></progress-bar>
+<br />
+<br />
+<progress-bar
+  [progress]="progressPercent"
+  [progress-color]="'dodgerblue'"
+></progress-bar>
+<br />
+
+<p>Tăng giảm progress</p>
+<button (click)="progressPercent = progressPercent + 1">Tăng progress</button>
+<span [style]="styleProgress">{{ progressPercent }}</span>
+<button (click)="progressPercent = progressPercent - 1">Giảm progress</button>
