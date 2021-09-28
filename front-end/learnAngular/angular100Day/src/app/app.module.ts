@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { aloComponent } from 'src/alo/alo.component';
 import { AppComponent } from './app.component';
 import { HiComponent } from './hi/hi.component';
+import { progressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, aloComponent, HiComponent],
+  declarations: [AppComponent, aloComponent, HiComponent, progressBarComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

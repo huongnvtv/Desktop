@@ -12,6 +12,7 @@ export class AppComponent {
   };
   bgInfo = 'bg-active bg-color';
   bgNormal = 'bg-normal';
+  styleOfMe = 'font-size : 20px; color : red';
   ngOnInit() {
     // khi khoi tao 1 component
     console.log('hello init');
