@@ -161,9 +161,9 @@
           },
         ],
         render: function () {
-          const htmls = this.songs.map((song) => {
+          const htmls = this.songs.map((song, index) => {
             return `
-                    <div class="song">
+                    <div class="song ${index === this.currentIndex ? 'active' : ''}">
                     <div class="thumb" style="background-image: url('${song.image}')">
                     </div>
                     <div class="body">
@@ -258,6 +258,8 @@
                 _this.nextSong();
               }
               audioMs.play();
+              _this.render();
+              _this.scrollToActiveSong();
             };
             // khi prev song
             prevBtn.onclick = function () {
@@ -267,6 +269,7 @@
                 _this.prevSong();
               }
               audioMs.play();
+              _this.render();
             };
             // khi random song
             randomBtn.onclick = function () {
@@ -287,6 +290,11 @@
               this.classList.toggle('active', _this.isRepeat);
             };
           };
+        },
+        scrollToActiveSong: function () {
+          setTimeout(() => {
+            $('.song.active').scrollIntoView();
+          }, 500);
         },
         nextSong: function () {
           this.currentIndex++;
