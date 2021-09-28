@@ -15,6 +15,8 @@ export class AppComponent {
   styleOfMe = 'font-size : 20px; color : red';
 
   progressPercent = 40;
+  ProgressColor = 'yellow';
+  listColor = ['yellow', 'red', 'orange', 'skyblue'];
   styleProgress = 'margin: 0 20px';
   ngOnInit() {
     // khi khoi tao 1 component

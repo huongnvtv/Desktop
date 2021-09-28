@@ -8,7 +8,7 @@
 <br />
 <progress-bar
   [progress]="progressPercent"
-  [progress-color]="'dodgerblue'"
+  [progress-color]="ProgressColor"
 ></progress-bar>
 <br />
 
@@ -16,3 +16,11 @@
 <button (click)="progressPercent = progressPercent + 1">Tăng progress</button>
 <span [style]="styleProgress">{{ progressPercent }}</span>
 <button (click)="progressPercent = progressPercent - 1">Giảm progress</button>
+<p>Xét màu sắc</p>
+<button
+  *ngFor="let myColor of listColor; last as lastColor"
+  (click)="ProgressColor = myColor"
+  [class.mt-right]="!lastColor"
+>
+  {{ myColor }}
+</button>

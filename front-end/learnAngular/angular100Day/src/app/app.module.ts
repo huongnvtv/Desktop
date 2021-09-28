@@ -4,9 +4,18 @@ import { aloComponent } from 'src/alo/alo.component';
 import { AppComponent } from './app.component';
 import { HiComponent } from './hi/hi.component';
 import { progressBarComponent } from './progress-bar/progress-bar.component';
+import { AuthorListComponent } from './author-list/author-list.component';
+import { AuthorDetail } from './author-detail/author-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, aloComponent, HiComponent, progressBarComponent],
+  declarations: [
+    AppComponent,
+    aloComponent,
+    HiComponent,
+    progressBarComponent,
+    AuthorListComponent,
+    AuthorDetail,
+  ],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
