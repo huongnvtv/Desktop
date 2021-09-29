@@ -10,5 +10,4 @@ export class ToggleComponent implements OnInit {
 
   ngOnInit(): void {}
   @Input() checked: boolean = true;
-  @Output() checkedChange = new EventEmitter<boolean>();
 }
