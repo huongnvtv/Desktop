@@ -18,6 +18,7 @@ export class AppComponent {
   ProgressColor = 'yellow';
   listColor = ['yellow', 'red', 'orange', 'skyblue'];
   styleProgress = 'margin: 0 20px';
+  isChecked = true;
   ngOnInit() {
     // khi khoi tao 1 component
     console.log('hello init');

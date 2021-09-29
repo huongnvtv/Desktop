@@ -1,0 +1,8 @@
+<div
+  class="toggle-wrapper"
+  [class.checked]="checked"
+  tabindex="0"
+  (click)="checkedChange.emit(!this.checked)"
+>
+  <div class="toggle"></div>
+</div>

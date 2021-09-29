@@ -293,7 +293,10 @@
         },
         scrollToActiveSong: function () {
           setTimeout(() => {
-            $('.song.active').scrollIntoView();
+            $('.song.active').scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest',
+            });
           }, 500);
         },
         nextSong: function () {
