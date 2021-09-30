@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Author } from '../author';
+import { Author, authors } from '../author';
 
 @Component({
   selector: 'author-detail',
   template: `
     <div>
       {{ author.firstName }} {{ author.lastName }}
-      <button style="margin-bottom : 1rem" (click)="select.emit(author)">
+      <button style="margin-bottom : 1rem" (click)="select.emit()">
         select
       </button>
       <button style="margin-left : 10px" (click)="delete.emit(author.id)">
@@ -16,14 +16,7 @@ import { Author } from '../author';
   `,
 })
 export class AuthorDetailComponent {
-  @Input() author: Author = {
-    id: 1,
-    firstName: 'Lee',
-    lastName: 'Minho',
-    email: 'Minho@gmail.com',
-    gender: 'Male',
-    ipAddress: '102.160.228.44',
-  };
+  @Input() author = authors[0];
   @Output() select = new EventEmitter<Author>();
   @Output() delete = new EventEmitter<number>();
 }
