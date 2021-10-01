@@ -1,1 +1,6 @@
-<app-toggle></app-toggle>
+<input type="text" #nameInput />
+<!-- toggleComp là một instance của toggle -->
+<app-toggle #toggleComp [(checked)]="checked"></app-toggle>
+<button (click)="toggleComp.toggle()" style="margin-top: 10px">
+  Toggle me
+</button>
