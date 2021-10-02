@@ -13,9 +13,12 @@ export class AppComponent implements AfterViewInit {
   nameInput!: ElementRef<HTMLInputElement>;
   @ViewChild('divElement')
   divElement!: ElementRef<HTMLDivElement>;
+  @ViewChild('btn') btn!: ElementRef<HTMLButtonElement>;
   ngAfterViewInit() {
-    console.log(this.toggleComp);
-    console.log(this.divElement);
+    this.divElement.nativeElement.innerText = 'Xin chào';
+    this.btn.nativeElement.onclick = () => {
+      this.toggleComp.toggle();
+    };
   }
   ngOnInit() {
     setTimeout(() => {
