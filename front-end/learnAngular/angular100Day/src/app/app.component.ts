@@ -11,8 +11,11 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(ToggleComponent) toggleComp!: ToggleComponent;
   @ViewChild('nameInput', { static: true })
   nameInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('divElement')
+  divElement!: ElementRef<HTMLDivElement>;
   ngAfterViewInit() {
     console.log(this.toggleComp);
+    console.log(this.divElement);
   }
   ngOnInit() {
     setTimeout(() => {
