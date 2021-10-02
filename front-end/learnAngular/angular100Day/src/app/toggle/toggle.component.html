@@ -1,3 +1,6 @@
+<header>
+  <ng-content select=".header"></ng-content>
+</header>
 <div
   class="toggle-wrapper"
   [class.checked]="checked"
@@ -5,4 +8,11 @@
   (click)="toggle()"
 >
   <div class="toggle"></div>
+</div>
+<div class="toogle-label">
+  <ng-content select=".app-label"></ng-content>
+</div>
+
+<div class="skip">
+  <ng-content seleect="button"></ng-content>
 </div>

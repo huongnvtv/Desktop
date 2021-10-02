@@ -1,6 +1,10 @@
-<input type="text" #nameInput />
 <!-- toggleComp là một instance của toggle -->
-<app-toggle #toggleComp [(checked)]="checked"></app-toggle>
-<button #btn style="margin-top: 10px">Toggle me</button>
-
-<div #divElement>hello anh em</div>
+<app-toggle #toggleComp [(checked)]="question.question1">
+  <h3 class="header">header 1</h3>
+  <span class="app-label">hello anh em</span>
+</app-toggle>
+<app-toggle [(checked)]="question.question2">
+  <h3 class="header">header 2</h3>
+  <span ngProjectAs=".app-label">hello anh em</span>
+  <button>skip</button>
+</app-toggle>
