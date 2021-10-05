@@ -7,8 +7,5 @@ import { ToggleComponent } from './toggle/toggle.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  question = {
-    question1: true,
-    question2: false,
-  };
+  counter = 1;
 }

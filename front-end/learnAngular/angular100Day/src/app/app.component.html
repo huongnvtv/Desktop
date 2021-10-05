@@ -1,10 +1,26 @@
-<!-- toggleComp là một instance của toggle -->
-<app-toggle #toggleComp [(checked)]="question.question1">
-  <h3 class="header">header 1</h3>
-  <span class="app-label">hello anh em</span>
-</app-toggle>
-<app-toggle [(checked)]="question.question2">
-  <h3 class="header">header 2</h3>
-  <span ngProjectAs=".app-label">hello anh em</span>
-  <button>skip</button>
-</app-toggle>
+<ng-template #buttonTmpl let-label let-className="className" let-icon="icon">
+  <button [ngClass]="['btn', className ? className : '']">
+    <i *ngIf="icon" class="fa {{ icon }}"></i>
+    {{ label }}
+  </button>
+</ng-template>
+
+<ng-container
+  [ngTemplateOutlet]="buttonTmpl"
+  [ngTemplateOutletContext]="{
+    $implicit: 'Click here',
+    className: 'btn-primary',
+    icon: null
+  }"
+>
+</ng-container>
+
+<ng-container
+  [ngTemplateOutlet]="buttonTmpl"
+  [ngTemplateOutletContext]="{
+    $implicit: 'Remove',
+    className: 'btn-danger',
+    icon: 'fa-remove'
+  }"
+>
+</ng-container>
