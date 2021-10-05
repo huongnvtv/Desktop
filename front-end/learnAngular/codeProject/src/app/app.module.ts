@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { PromoCodeComponent } from './promo-code/promo-code.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CartSummaryComponent,
-    PromoCodeComponent
+    PromoCodeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
