@@ -1,5 +1,7 @@
 // Đối tượng validator
 function Validator(options) {
+  var selectorRules = {};
+
   // Hàm thực hiện validates
   function validate(inputElement, rule) {
     var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
@@ -15,6 +17,12 @@ function Validator(options) {
   var formElement = document.querySelector(options.form);
   if (formElement) {
     options.rules.forEach((rule) => {
+      // lưu lại rule cho mỗi input
+      if (Array.isArray(selectorRules[rule.selector])) {
+        selectorRules[rule.selector].push(rule.test);
+      } else {
+        selectorRules[rule.selector] = [rule.test];
+      }
       var inputElement = formElement.querySelector(rule.selector);
       // Xử lí trường hợp blur khỏi input
       if (inputElement) {
@@ -35,11 +43,11 @@ function Validator(options) {
 // Nguyên tắc các rule :
 // 1. khi có lỗi trả ra message lỗi
 // 2. Khi không có lỗi không trả ra gì cả
-Validator.isRequired = (selector) => {
+Validator.isRequired = (selector, message) => {
   return {
     selector: selector,
     test: function (value) {
-      return value.trim() ? undefined : 'Vui lòng vào trường này';
+      return value.trim() ? undefined : message || 'Vui lòng vào trường này';
     },
   };
 };
@@ -59,6 +67,16 @@ Validator.minLength = (selector, min) => {
     selector: selector,
     test: function (value) {
       return value.length >= min ? undefined : `Vui lòng nhập tối thiểu ${min} kí tự`;
+    },
+  };
+};
+Validator.isConfirmed = (selector, getComfirmValue, message) => {
+  return {
+    selector: selector,
+    test: function (value) {
+      return value === getComfirmValue()
+        ? undefined
+        : message || 'Giá trị nhập vào không chính xác';
     },
   };
 };
