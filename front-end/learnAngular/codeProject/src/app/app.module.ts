@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { PromoCodeComponent } from './promo-code/promo-code.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product-list/product.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,11 @@ import { ProductListComponent } from './product-list/product-list.component';
     HeaderComponent,
     CartSummaryComponent,
     PromoCodeComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

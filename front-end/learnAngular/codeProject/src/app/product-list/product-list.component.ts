@@ -17,5 +17,12 @@ export class ProductListComponent implements OnInit {
       price: '$5.99',
       quantity: 2,
     },
+    {
+      img: 'https://via.placeholder.com/200x150',
+      name: 'PRODUCT ITEM NUMBER 2',
+      description: 'Description for product item number 2',
+      price: '$9.99',
+      quantity: 1,
+    },
   ];
 }
