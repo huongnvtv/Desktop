@@ -2,7 +2,7 @@
 function Validator(options) {
   // Hàm thực hiện validates
   function validate(inputElement, rule) {
-    var errorElement = inputElement.parentElement.querySelector('.form-message');
+    var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
     var errorMessage = rule.test(inputElement.value);
     if (errorMessage) {
       errorElement.innerText = errorMessage;
@@ -16,11 +16,18 @@ function Validator(options) {
   if (formElement) {
     options.rules.forEach((rule) => {
       var inputElement = formElement.querySelector(rule.selector);
+      // Xử lí trường hợp blur khỏi input
       if (inputElement) {
         inputElement.onblur = function () {
           validate(inputElement, rule);
         };
       }
+      // Xử lí mỗi khi người dùng nhập vào input
+      inputElement.oninput = function () {
+        var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
+        errorElement.innerText = '';
+        inputElement.parentElement.classList.remove('invalid');
+      };
     });
   }
 }
@@ -40,8 +47,18 @@ Validator.isEmail = (selector) => {
   return {
     selector: selector,
     test: function (value) {
-      var regex = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-      return value.match(regex) ? undefined : 'Trường này phải là email';
+      // Kiểm tra xem có phải là email hay không  nguồn stackoverflow
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(value).toLowerCase()) ? undefined : 'Trường này phải là email';
+    },
+  };
+};
+Validator.minLength = (selector, min) => {
+  return {
+    selector: selector,
+    test: function (value) {
+      return value.length >= min ? undefined : `Vui lòng nhập tối thiểu ${min} kí tự`;
     },
   };
 };
