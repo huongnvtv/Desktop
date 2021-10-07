@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { interval } from 'rxjs';
 import { ToggleComponent } from './toggle/toggle.component';
 
 @Component({
@@ -7,5 +8,6 @@ import { ToggleComponent } from './toggle/toggle.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  counter = 1;
+  currentDate = new Date();
+  demo = interval(1000);
 }

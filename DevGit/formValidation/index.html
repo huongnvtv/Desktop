@@ -74,8 +74,10 @@
         errorSelector: '.form-message',
         rules: [
           Validator.isRequired('#fullname', 'Vui lòng nhập tên chính xác'),
+          Validator.isRequired('#email', 'Vui lòng nhập vào trường này'),
           Validator.isEmail('#email'),
           Validator.minLength('#password', 6),
+          Validator.isRequired('#password_confirmation'),
           Validator.isConfirmed(
             '#password_confirmation',
             () => {
@@ -84,6 +86,9 @@
             'Mật khẩu nhập lại không chính xác'
           ),
         ],
+        onSubmit: function (data) {
+          console.log(data);
+        },
       });
     </script>
   </body>

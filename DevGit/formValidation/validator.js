@@ -5,7 +5,15 @@ function Validator(options) {
   // Hàm thực hiện validates
   function validate(inputElement, rule) {
     var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
-    var errorMessage = rule.test(inputElement.value);
+    var errorMessage;
+    // Lấy ra cá rule của selector
+    var rules = selectorRules[rule.selector];
+    // Lặp qua từng rules và kiểm tra
+    for (var i = 0; i < rules.length; i++) {
+      errorMessage = rules[i](inputElement.value);
+      // Nếu có lỗi thì dừng kiểm tra
+      if (errorMessage) break;
+    }
     if (errorMessage) {
       errorElement.innerText = errorMessage;
       inputElement.parentElement.classList.add('invalid');
@@ -13,9 +21,29 @@ function Validator(options) {
       errorElement.innerText = '';
       inputElement.parentElement.classList.remove('invalid');
     }
+    return !errorMessage;
   }
   var formElement = document.querySelector(options.form);
   if (formElement) {
+    // Khi submit form thay hành vi mặc định bằng validate tất cả các rule
+    formElement.onsubmit = (e) => {
+      e.preventDefault();
+      var isFormValid = true;
+
+      // lặp qua từng rule và validate
+      options.rules.forEach((rule) => {
+        var inputElement = formElement.querySelector(rule.selector);
+        var isValid = validate(inputElement, rule);
+        if (!isValid) {
+          isFormValid = false;
+        }
+      });
+      if (isFormValid) {
+        if (typeof options.onsubmit === 'function') {
+          var enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
+        }
+      }
+    };
     options.rules.forEach((rule) => {
       // lưu lại rule cho mỗi input
       if (Array.isArray(selectorRules[rule.selector])) {

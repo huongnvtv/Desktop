@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "593a9688-42bd-4812-83d9-784bc7df647c"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "codeProject": {
+    "wedShopping": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/codeProject",
+            "outputPath": "dist/wedShopping",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "codeProject:build:production"
+              "browserTarget": "wedShopping:build:production"
             },
             "development": {
-              "browserTarget": "codeProject:build:development"
+              "browserTarget": "wedShopping:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "codeProject:build"
+            "browserTarget": "wedShopping:build"
           }
         },
         "test": {
@@ -105,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "codeProject"
+  "defaultProject": "wedShopping"
 }

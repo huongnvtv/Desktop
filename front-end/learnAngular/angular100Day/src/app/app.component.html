@@ -1,26 +1,7 @@
-<ng-template #buttonTmpl let-label let-className="className" let-icon="icon">
-  <button [ngClass]="['btn', className ? className : '']">
-    <i *ngIf="icon" class="fa {{ icon }}"></i>
-    {{ label }}
-  </button>
-</ng-template>
-
-<ng-container
-  [ngTemplateOutlet]="buttonTmpl"
-  [ngTemplateOutletContext]="{
-    $implicit: 'Click here',
-    className: 'btn-primary',
-    icon: null
-  }"
->
-</ng-container>
-
-<ng-container
-  [ngTemplateOutlet]="buttonTmpl"
-  [ngTemplateOutletContext]="{
-    $implicit: 'Remove',
-    className: 'btn-danger',
-    icon: 'fa-remove'
-  }"
->
-</ng-container>
+<P>{{ currentDate | date }}</P>
+<p>{{ currentDate | date: "dd-MM-yyyy" }}</p>
+<P>{{ "Văn Hướng" | lowercase }}</P>
+<p>{{ 250 | currency }}</p>
+<p>{{ 250000 | currency: "VND" }}</p>
+<p>{{ 2.1221212 | number: "1.1-4" }}</p>
+<p>{{ demo | async }}</p>
