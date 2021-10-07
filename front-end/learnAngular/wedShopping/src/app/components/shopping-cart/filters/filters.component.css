@@ -1,0 +1,9 @@
+.card-body__item {
+  margin-bottom: 30px;
+}
+.card-body__item-label {
+  padding-bottom: 10px;
+}
+.card-body__btn {
+  width: 100%;
+}
