@@ -1,0 +1,17 @@
+.shopping__header {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping__nav {
+  display: flex;
+}
+.shopping__nav-item {
+  margin-right: 50px;
+  line-height: 38px;
+}
+.shopping__nav-item a {
+  text-decoration: none;
+}
+.shopping__nav-register {
+  margin-right: 20px;
+}
