@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Lưới Xe Lu",
+      "description": "Lưới Xe Lu - Ủi Đi Biển Đồ chơi trẻ em (Nhiều màu) - Đồ chơi Tí Tèo (Giao mẫu ngẫu nhiên)",
+      "imageUrl": "http://file.hstatic.net/1000216080/file/lt68-268__1_.jpg",
+      "price": 129000
+    },
+    {
+      "id": 2,
+      "name": "iPhone 12 Pro Max 256GB",
+      "description": "iPhone 12 Pro Max 256GB đổi bảo hành tuy không phải là sản phẩm nguyên hộp, không bao gồm phụ kiện như iPhone 12 Pro Max đã kích hoạt hay iPhone 12 mới. Tuy vậy, đây vẫn là sản phẩm mới do Apple sản xuất nhằm áp dụng cho chương trình 1 đổi 1 của hãng",
+      "imageUrl": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/p/h/photo_2020-10-13_22-12-24.jpg_1_2_1_3.png",
+      "price": 28590000
+    },
+    {
+      "id": 3,
+      "name": "Apple MacBook Pro",
+      "description": "Apple MacBook Pro 13 Touch Bar M1 512GB 2020 I Chính hãng Apple Việt Nam",
+      "imageUrl": "https://cdn.cellphones.com.vn/media/catalog/product/cache/7/thumbnail/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp-silver-select-202011_2.jpg",
+      "price": 39500000
+    },
+    {
+      "id": 4,
+      "name": "Tivi SamSung 58RU7100",
+      "description": " Hình ảnh sống động sắc nét với chuẩn 4K UHD ",
+      "imageUrl": "https://binhminhdigital.com/storedata/images/product/tivi-samsung-58ru7100(3).jpg",
+      "price": 25000000
+    },
+    {
+      "id": 5,
+      "name": "Quạt điều hòa không khí",
+      "description": "Quạt điều hoà không khí Kosmo KM-AK3000 nhập khẩu Thái Lan",
+      "imageUrl": "http://quatdieuhoachinhhang.com/upload/public/e441ecb89ad10b73222a5e946932f61b.jpg",
+      "price": 5500000
+    },
+    {
+      "id": 6,
+      "name": "Máy Lọc Nước A. O. Smith AR75-A-S-H1",
+      "description": "Công nghệ RO - Side Stream: Giúp giảm đáng kể lượng nước thải, cho tỉ lệ nước thải : nước tinh khiết là 1:1, và kéo dài tuổi thọ màng lọc đến 3 năm.",
+      "imageUrl": "https://product.hstatic.net/1000286959/product/water_purifier___right_view___background_subtraction_h1_21aa617ffec64f42853e154341a2d417_master.png",
+      "price": 12500000
+    }
+  ],
+  "cart": [],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

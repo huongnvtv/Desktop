@@ -25,7 +25,7 @@ export class ProductService {
       'product 4',
       'this is a product 4',
       100,
-      'https://lh3.googleusercontent.com/proxy/s80ohhjJvNe1iJ1zhcjzkkuevNdLCeaZYh3ZICegO5HPgCRW4ib0SkHwwQ-02d82p8Qz82e6fSDIwa-QKld7bA80y3dy-2umpDP401lozdLSfl7i7xJee8sOTa_9VtT7vCpNc9aDt3MgK8HW1amoHpnPl457Rmrt'
+      'https://tuvanmuasam.com/wp-content/uploads/2020/08/Ipad-Mini-5-64gb-300x300.jpeg'
     ),
   ];
   constructor() {}
