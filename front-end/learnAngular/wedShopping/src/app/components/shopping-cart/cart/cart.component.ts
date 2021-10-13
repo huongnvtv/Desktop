@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CartItem } from 'src/app/models/cartItem';
 import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
 import { MessengerService } from 'src/app/services/messenger.service';
 
 @Component({
@@ -15,8 +17,32 @@ export class CartComponent implements OnInit {
     // { id: 4, productId: 4, productName: 'sp4', qty: 2, price: 100 },
   ];
   cartTotal = 0;
-  constructor(private msg: MessengerService) {}
+  constructor(
+    private msg: MessengerService,
+    private cartService: CartService
+  ) {}
 
-  ngOnInit(): void {}
-  addProductToCart(product: Product) {}
+  ngOnInit(): void {
+    this.handleSubscription();
+    this.loadCartItems();
+  }
+  handleSubscription() {
+    this.msg.getMsg().subscribe((product: Product) => {
+      this.loadCartItems();
+    });
+  }
+
+  loadCartItems() {
+    this.cartService.getCartItems().subscribe((items: CartItem[]) => {
+      this.cartItems = items;
+      this.calcCartTotal();
+    });
+  }
+
+  calcCartTotal() {
+    this.cartTotal = 0;
+    this.cartItems.forEach((item) => {
+      this.cartTotal += item.qty * item.price;
+    });
+  }
 }
