@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { interval } from 'rxjs';
+import { interval, Observable } from 'rxjs';
 import { ToggleComponent } from './toggle/toggle.component';
 
 @Component({
@@ -10,4 +10,11 @@ import { ToggleComponent } from './toggle/toggle.component';
 export class AppComponent {
   currentDate = new Date();
   demo = interval(1000);
+
+  observable = new Observable(function subscribe(observer) {
+    const id = setTimeout(() => {
+      observer.next('Hello Rxjs');
+      observer.complete();
+    }, 1000);
+  });
 }
