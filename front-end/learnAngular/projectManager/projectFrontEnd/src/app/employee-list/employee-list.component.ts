@@ -16,7 +16,5 @@ export class EmployeeListComponent implements OnInit {
       this.employees = data;
       console.log(this.employees);
     });
-    this.getEmployees();
   }
-  private getEmployees() {}
 }
