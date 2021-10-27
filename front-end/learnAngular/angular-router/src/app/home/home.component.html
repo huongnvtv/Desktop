@@ -1,2 +1,15 @@
 <p>home Component</p>
 <router-outlet></router-outlet>
+<ul>
+  <li
+    *ngFor="let article of articles$ | async"
+    style="border: 1px solid #333; margin: 10px"
+  >
+    {{ article.title }}
+    <br />
+    {{ article.body }}
+    <br />
+    {{ article.slug }}
+    <a href="">Read More</a>
+  </li>
+</ul>
