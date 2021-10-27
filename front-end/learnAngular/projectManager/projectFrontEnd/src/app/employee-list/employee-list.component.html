@@ -16,8 +16,22 @@
       <td>{{ employee.email }}</td>
       <td><img src="{{ employee.avatar }}" height="100px" /></td>
       <td>
-        <button (click)="updateEmployee(employee.id)" class="btn btn-info">
+        <button
+          (click)="updateEmployee(employee.id)"
+          class="btn btn-info"
+          style="margin-right: 20px"
+        >
           Update
+        </button>
+        <button
+          (click)="deleteEmployee(employee.id)"
+          class="btn btn-danger"
+          style="margin-right: 20px"
+        >
+          Delete
+        </button>
+        <button (click)="employeeDetails(employee.id)" class="btn btn-warning">
+          View
         </button>
       </td>
     </tr>
